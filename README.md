@@ -1,1 +1,1 @@
-# sticza
+# sticza.com
