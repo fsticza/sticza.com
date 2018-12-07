@@ -451,7 +451,7 @@
 }
 
 .avatar-wrapper {
-  background: linear-gradient(45deg, #000 48%, $primary 50%, #000 52%);
+  background: #000;
   box-shadow: 0 0 3px #000;
   width: 220px;
   border-radius: 50%;
