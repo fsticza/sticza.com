@@ -1,4 +1,4 @@
-# ferenc.sticza.com
+# sticza.com
 
 > Ferenc Sticza website
 

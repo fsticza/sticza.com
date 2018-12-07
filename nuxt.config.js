@@ -4,7 +4,7 @@ module.exports = {
   mode: 'spa',
 
   router: {
-    // base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/ferenc.sticza.com/' : '',
+    // base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/sticza.com/' : '',
     linkExactActiveClass: 'active',
     linkActiveClass: ''
   },
@@ -28,7 +28,7 @@ module.exports = {
         content: 'Embrace change with flexible technologies'
       },
       { property: 'og:title', content: 'Ferenc Sticza' },
-      { property: 'og:url', content: 'https://ferenc.sticza.com' }
+      { property: 'og:url', content: 'https://sticza.com' }
     ],
     link: [
       {
