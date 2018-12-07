@@ -28,8 +28,8 @@
                 <div>
                   <a
                     class="inline-link"
-                    href="mailto:ferenc.sticza@gmail.com">
-                    ferenc.sticza@gmail.com
+                    href="mailto:ferenc@sticza.com">
+                    ferenc@sticza.com
                   </a>
                 </div>
               </div>
