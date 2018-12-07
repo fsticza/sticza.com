@@ -1,0 +1,84 @@
+<template>
+  <article
+    :class="{ 'article-box--even': !isOdd }"
+    class="article-box">
+    <div
+      :class="{ 'text-md-right': isOdd }"
+      class="row align-items-center">
+      <div
+        :class="{ 'order-sm-2': isOdd }"
+        class="col-sm-6 my-4">
+        <a
+          :href="link"
+          target="_blank"
+          class="text-center d-block">
+          <img
+            :src="require(`~/assets/img/${src}`)"
+            :height="height"
+            class="d-inline-block m-2"
+            alt="Logo">
+        </a>
+      </div>
+      <div class="col-sm-6 my-4">
+        <header class="mb-1">
+          <h1 class="h4 article__title">
+            {{ title }}
+          </h1>
+          <time>{{ from }}</time> -
+          <time>{{ to }}</time>
+        </header>
+        <div class="article__botdy">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </article>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    from: {
+      type: String,
+      default: ''
+    },
+    to: {
+      type: String,
+      default: ''
+    },
+    link: {
+      type: String,
+      default: ''
+    },
+    src: {
+      type: String,
+      default: ''
+    },
+    height: {
+      type: [Number, String],
+      default: '180'
+    },
+    isOdd: {
+      type: Boolean,
+      default: true
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+@import './assets/scss/abstracts/variables';
+
+$width: 3px;
+
+.article-box {
+  position: relative;
+}
+.article-box--even {
+  background: lighten($body-color, 77%);
+}
+</style>

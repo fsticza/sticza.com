@@ -9,7 +9,8 @@ $jumbotron-bg: transparent;
 $dark: $body-color;
 
 $headings-font-family: 'Roboto Slab', serif;
-$link-color: $pink;
+$link-decoration: underline;
+$link-color: $body-color;
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";

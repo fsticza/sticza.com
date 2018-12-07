@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
         <div class="container">
-          <nuxt-link
+          <span
             class="navbar-brand d-flex align-items-center"
             to="/">
             <img
@@ -11,8 +11,8 @@
               height="36"
               class="d-inline-block align-top brand-logo"
               alt="Logo">
-            <h1 class="h5 mb-0 ml-2">whoami</h1>
-          </nuxt-link>
+            <h1 class="h5 mb-0 ml-2">sticza.com | whoami</h1>
+          </span>
           <!-- <button
             class="navbar-toggler border-0"
             type="button"
@@ -97,7 +97,6 @@ body {
       position: absolute;
       bottom: 0;
       left: 0;
-      background: lighten($body-color, 70%);
     }
   }
 }
