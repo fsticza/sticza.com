@@ -11,7 +11,7 @@
               height="36"
               class="d-inline-block align-top brand-logo"
               alt="Logo">
-            <h1 class="h5 mb-0 ml-2">ferenc.sticza.com</h1>
+            <h1 class="h5 mb-0 ml-2">whoami</h1>
           </nuxt-link>
           <!-- <button
             class="navbar-toggler border-0"
