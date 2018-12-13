@@ -77,6 +77,7 @@ $width: 3px;
 
 .article-box {
   position: relative;
+  padding: 0 1rem;
 }
 
 .article-box--odd {
