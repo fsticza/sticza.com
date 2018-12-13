@@ -63,6 +63,48 @@
   </div>
 </template>
 
+<script>
+const options = {
+  rootMargin: '0px',
+  threshold: 0.1
+}
+const handleIntersection = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      loadImage(entry.target)
+    }
+  })
+}
+const loadImage = image => {
+  const src = image.dataset.src
+  fetchImage(src).then(() => {
+    image.src = src
+  })
+}
+const fetchImage = url => {
+  return new Promise((resolve, reject) => {
+    const image = new Image()
+    image.src = url
+    image.onload = resolve
+    image.onerror = reject
+  })
+}
+export default {
+  mounted() {
+    const images = Array.from(document.querySelectorAll('img[data-src]'))
+    if ('IntersectionObserver' in window) {
+      images.forEach(img => {
+        const observer = new IntersectionObserver(handleIntersection, options)
+        observer.observe(img)
+      })
+      return
+    }
+    images.forEach(loadImage)
+  }
+}
+</script>
+
+
 <style lang="scss">
 @import './assets/scss/app';
 $logo-height: 2.25rem;

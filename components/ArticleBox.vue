@@ -13,7 +13,7 @@
           target="_blank"
           class="text-center d-block">
           <img
-            :src="require(`~/assets/img/${src}`)"
+            :data-src="require(`~/assets/img/${src}`)"
             :height="height"
             class="d-inline-block bg-white p-2"
             alt="Logo">
