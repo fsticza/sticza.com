@@ -13,7 +13,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Ferenc Sticza',
+    title: 'Ferenc Sticza | Full-Stack JavaScript Engineer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,7 +27,7 @@ module.exports = {
         property: 'og:description',
         content: 'Embrace change with flexible technologies'
       },
-      { property: 'og:title', content: 'Ferenc Sticza' },
+      { property: 'og:title', content: 'Ferenc Sticza | Full-Stack JavaScript Engineer' },
       { property: 'og:url', content: 'https://sticza.com' }
     ],
     link: [
