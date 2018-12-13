@@ -79,7 +79,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    ['@nuxtjs/pwa', { icon: false }]
   ],
 
   /*

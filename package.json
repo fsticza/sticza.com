@@ -9,6 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "imagemin": "node ./imagemin.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
@@ -16,6 +17,7 @@
     "deploy": "./deploy.sh"
   },
   "dependencies": {
+    "@nuxtjs/pwa": "^2.6.0",
     "bootstrap": "^4.1.3",
     "bootstrap-vue": "^2.0.0-rc.11",
     "cross-env": "^5.2.0",
@@ -28,6 +30,9 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-vue": "^4.7.1",
+    "imagemin": "^6.0.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^6.0.0",
     "node-sass": "^4.10.0",
     "nodemon": "^1.18.7",
     "prettier": "^1.14.3",

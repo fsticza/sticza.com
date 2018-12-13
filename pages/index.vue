@@ -132,22 +132,22 @@
             <strong>Role:</strong> Full-Stack JavaScript development, cross-platform desktop/mobile/web application development, knowledge sharing.
           </div>
           <div>
-            <strong>Partners:</strong> 
-            <a 
+            <strong>Partners:</strong>
+            <a
               class="text-white"
-              href="https://www.staralliance.com/en/" 
+              href="https://www.staralliance.com/en/"
               target="_blank">Star Alliance</a>
-            <a 
+            <a
               class="text-white"
-              href="https://www.msci.com/" 
+              href="https://www.msci.com/"
               target="_blank">MSCI</a>
-            <a 
+            <a
               class="text-white"
-              href="https://www.ahrt.hu/en" 
+              href="https://www.ahrt.hu/en"
               target="_blank">Antenna Hungária Zrt.</a>
-            <a 
+            <a
               class="text-white"
-              href="https://www.idomsoft.hu/?lang=en" 
+              href="https://www.idomsoft.hu/?lang=en"
               target="_blank">IdomSoft</a>
           </div>
         </article-box>
