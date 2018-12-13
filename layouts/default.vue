@@ -100,4 +100,8 @@ body {
     }
   }
 }
+
+.section__title {
+  margin-bottom: 1rem;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <article
-    :class="{ 'article-box--even': !isOdd }"
+    :class="[!isOdd ? 'article-box--even' : 'article-box--odd']"
     class="article-box">
     <div
       :class="{ 'text-md-right': isOdd }"
@@ -15,7 +15,7 @@
           <img
             :src="require(`~/assets/img/${src}`)"
             :height="height"
-            class="d-inline-block m-2"
+            class="d-inline-block bg-white p-2"
             alt="Logo">
         </a>
       </div>
@@ -78,7 +78,31 @@ $width: 3px;
 .article-box {
   position: relative;
 }
-.article-box--even {
-  background: lighten($body-color, 77%);
+
+.article-box--odd {
+  background: $body-color;
+  color: #fff;
 }
+
+@include media-breakpoint-up(sm) {
+  .article-box {
+    background: linear-gradient(
+      to right,
+      $body-color,
+      $body-color 50%,
+      #fff 50%
+    );
+    color: #fff;
+  }
+  .article-box--even {
+    background: linear-gradient(
+      to left,
+      $body-color,
+      $body-color 50%,
+      #fff 50%
+    );
+  }
+}
+// @media screen {
+// }
 </style>
