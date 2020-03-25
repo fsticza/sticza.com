@@ -99,20 +99,11 @@
       <section class="section section--bordered">
         <h1 class="section__title">About</h1>
         <p>
-          I started my software developer career in 2006 with the classical WAMP
-          stack, HTML and CSS. For some reason, I was more interested in the
-          front-end parts. Soon, I found myself working on high traffic sites
-          where quality, reusable components, maintenance and performance
-          optimization were all important aspects. In 2014 I became a Tech Leader
-          of 10-12 Front-end Developers.
+          Quality-driven and motivated Full-Stack JavaScript Engineer with 10+ years of extensive experience in participating in all phases of software development. Adept at leading, training and supervising and determined to achieve extraordinary results. Possess a strong attention to detail and emphasis on product quality. 
         </p>
         <p>
-          I started to be more interested in server-side development when Node.js
-          became a thing. In late 2013, I begun to work with a software
-          architecture I believe fits best as a web client for RESTful APIs and I
-          felt it was a real redemption. I also started to learn how to create the
-          APIs for myself and became a Full-Stack JavaScript Engineer. Nowadays I
-          use JavaScript to create desktop, mobile and web applications.
+          Current preferred development stack:
+          Linux, Docker, Git, OpenAPI, Node.js, Webpack, React or Vue.js and CSS processors.
         </p>
       </section>
 
