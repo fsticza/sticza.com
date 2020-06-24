@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   router: {
     // base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/sticza.com/' : '',
@@ -18,22 +18,24 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
-      { name: 'msapplication-TileColor', content: '#353637' },
-      { name: 'theme-color', content: '#353637' },
-      { property: 'og:image', content: '/og-image.jpg' },
-      { property: 'og:image:width', content: '279' },
-      { property: 'og:image:height', content: '279' },
+      { name: 'msapplication-TileColor', content: '#2d2d2d' },
+      { name: 'theme-color', content: '#2d2d2d' },
+      { property: 'og:image', content: '/android-chrome-512x512.png' },
+      { property: 'og:image:width', content: '512' },
+      { property: 'og:image:height', content: '512' },
       {
         property: 'og:description',
         content: 'Embrace change with flexible technologies'
       },
-      { property: 'og:title', content: 'Ferenc Sticza | Full-Stack JavaScript Engineer' },
+      {
+        property: 'og:title',
+        content: 'Ferenc Sticza | Full-Stack JavaScript Engineer'
+      },
       { property: 'og:url', content: 'https://sticza.com' }
     ],
-    link: [
-      {
+    link: [{
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto+Slab'
+        href: 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
       },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -78,10 +80,7 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    'bootstrap-vue/nuxt',
-    ['@nuxtjs/pwa', { icon: false }]
-  ],
+  modules: [['@nuxtjs/pwa', { icon: false }]],
 
   /*
   ** Build configuration

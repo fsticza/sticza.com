@@ -5,13 +5,17 @@
         <div class="container">
           <span
             class="navbar-brand d-flex align-items-center"
-            to="/">
+            to="/"
+          >
             <img
-              src="~/assets/img/logo.svg"
+              src="~/assets/img/logo-v2.svg"
               height="36"
               class="d-inline-block align-top brand-logo"
-              alt="Logo">
-            <h1 class="h5 mb-0 ml-2">sticza.com | whoami</h1>
+              alt="Logo"
+            >
+            <h1 class="h5 mb-0 ml-2">
+              sticza.com | whoami
+            </h1>
           </span>
           <!-- <button
             class="navbar-toggler border-0"
@@ -47,17 +51,24 @@
       </nav>
     </header>
 
-    <nuxt/>
+    <nuxt />
 
     <footer class="bg-secondary main-footer text-center">
       <div class="container">
         2018 &copy; Ferenc Sticza | Tel:
         <a
           class="text-dark"
-          href="tel:+36/30-636-0775">+36/30-636-0775</a> | Email:
+          href="tel:+36/30-636-0775"
+        >
+          +36/30-636-0775
+        </a>
+        &nbsp;| Email:
         <a
           class="text-dark"
-          href="mailto:ferenc@sticza.com">ferenc@sticza.com</a>
+          href="mailto:ferenc@sticza.com"
+        >
+          ferenc@sticza.com
+        </a>
       </div>
     </footer>
   </div>
@@ -74,33 +85,6 @@ const handleIntersection = (entries, observer) => {
       loadImage(entry.target)
     }
   })
-}
-const loadImage = image => {
-  const src = image.dataset.src
-  fetchImage(src).then(() => {
-    image.src = src
-  })
-}
-const fetchImage = url => {
-  return new Promise((resolve, reject) => {
-    const image = new Image()
-    image.src = url
-    image.onload = resolve
-    image.onerror = reject
-  })
-}
-export default {
-  mounted() {
-    const images = Array.from(document.querySelectorAll('img[data-src]'))
-    if ('IntersectionObserver' in window) {
-      images.forEach(img => {
-        const observer = new IntersectionObserver(handleIntersection, options)
-        observer.observe(img)
-      })
-      return
-    }
-    images.forEach(loadImage)
-  }
 }
 </script>
 

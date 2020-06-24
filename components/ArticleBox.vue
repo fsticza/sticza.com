@@ -1,22 +1,28 @@
 <template>
   <article
     :class="[!isOdd ? 'article-box--even' : 'article-box--odd']"
-    class="article-box">
+    class="article-box"
+  >
     <div
       :class="{ 'text-md-right': isOdd }"
-      class="row align-items-center">
+      class="row align-items-center"
+    >
       <div
         :class="{ 'order-sm-2': isOdd }"
-        class="col-sm-6 my-4">
+        class="col-sm-6 my-4"
+      >
         <a
           :href="link"
+          rel="noopener"
           target="_blank"
-          class="text-center d-block">
+          class="text-center d-block article__link"
+        >
           <img
-            :data-src="require(`~/assets/img/${src}`)"
+            :src="require(`~/assets/img/${src}`)"
             :height="height"
-            class="d-inline-block bg-white p-2"
-            alt="Logo">
+            class="d-inline-block bg-white p-2 article__image"
+            alt="Logo"
+          >
         </a>
       </div>
       <div class="col-sm-6 my-4">
@@ -78,11 +84,22 @@ $width: 3px;
 .article-box {
   position: relative;
   padding: 0 1rem;
+  border-radius: 10px;
 }
 
 .article-box--odd {
   background: $body-color;
   color: #fff;
+}
+
+.article__image {
+  transition: all 200ms ease-in-out;
+}
+
+.article__link {
+  &:hover .article__image {
+    transform: scale(1.1);
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -94,6 +111,10 @@ $width: 3px;
       #fff 50%
     );
     color: #fff;
+  }
+  .article-box--odd {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .article-box--even {
     background: linear-gradient(
