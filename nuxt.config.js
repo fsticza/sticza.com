@@ -33,10 +33,7 @@ module.exports = {
       },
       { property: 'og:url', content: 'https://sticza.com' }
     ],
-    link: [{
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
-      },
+    link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'apple-touch-icon',
