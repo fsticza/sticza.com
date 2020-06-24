@@ -55,19 +55,20 @@
 
     <footer class="bg-secondary main-footer text-center">
       <div class="container">
-        2018 &copy; Ferenc Sticza | Tel:
+        <div>
+          2020 &copy; Ferenc Sticza
+        </div>
         <a
-          class="text-dark"
-          href="tel:+36/30-636-0775"
+          class="btn btn-sm btn-outline-dark"
+          href="tel:+36306360775"
         >
-          +36/30-636-0775
+          &#9742; Call me
         </a>
-        &nbsp;| Email:
         <a
-          class="text-dark"
+          class="btn btn-sm btn-outline-dark"
           href="mailto:ferenc@sticza.com"
         >
-          ferenc@sticza.com
+          @ E-mail me
         </a>
       </div>
     </footer>

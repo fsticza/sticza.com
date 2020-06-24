@@ -19,6 +19,7 @@
         >
           <img
             :src="require(`~/assets/img/${src}`)"
+            loading="lazy"
             :height="height"
             class="d-inline-block bg-white p-2 article__image"
             alt="Logo"

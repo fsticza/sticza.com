@@ -14,22 +14,18 @@
           <div class="col-sm-6 my-2 text-md-right">
             <div class="row align-items-center">
               <div class="col-lg-6">
-                <div>
-                  <a
-                    class="inline-link"
-                    href="tel:+36306360775"
-                  >
-                    +36/30-636-0775
-                  </a>
-                </div>
-                <div>
-                  <a
-                    class="inline-link"
-                    href="mailto:ferenc@sticza.com"
-                  >
-                    ferenc@sticza.com
-                  </a>
-                </div>
+                <a
+                  class="btn btn-sm btn-outline-dark"
+                  href="tel:+36306360775"
+                >
+                  &#9742; Call me
+                </a>
+                <a
+                  class="btn btn-sm btn-outline-dark"
+                  href="mailto:ferenc@sticza.com"
+                >
+                  @ E-mail me
+                </a>
               </div>
               <div class="col-lg-6 mb-lg-3">
                 <a
@@ -141,7 +137,7 @@
           <div>
             <strong>Partners:</strong>
             <a
-              class="text-white"
+              class="btn btn-outline-light mb-1"
               href="https://www.staralliance.com/en/"
               rel="noopener"
               target="_blank"
@@ -149,7 +145,7 @@
               Star Alliance
             </a>
             <a
-              class="text-white"
+              class="btn btn-outline-light mb-1"
               href="https://www.msci.com/"
               rel="noopener"
               target="_blank"
@@ -157,7 +153,7 @@
               MSCI
             </a>
             <a
-              class="text-white"
+              class="btn btn-outline-light mb-1"
               href="https://www.ahrt.hu/en"
               rel="noopener"
               target="_blank"
@@ -165,12 +161,20 @@
               Antenna Hungária Zrt.
             </a>
             <a
-              class="text-white"
+              class="btn btn-outline-light mb-1"
               href="https://www.idomsoft.hu/?lang=en"
               rel="noopener"
               target="_blank"
             >
               IdomSoft
+            </a>
+            <a
+              class="btn btn-outline-light mb-1"
+              href="https://servomovement.com/"
+              rel="noopener"
+              target="_blank"
+            >
+              Servo Movement
             </a>
           </div>
         </article-box>
@@ -375,10 +379,6 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/abstracts/variables';
-
-.inline-link {
-  display: inline-block;
-}
 
 .section--header {
   background: $secondary;
