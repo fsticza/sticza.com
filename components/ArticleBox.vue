@@ -5,17 +5,17 @@
   >
     <div
       :class="{ 'text-md-right': isOdd }"
-      class="row align-items-center"
+      class="row"
     >
       <div
         :class="{ 'order-sm-2': isOdd }"
-        class="col-sm-6 my-4"
+        class="col-sm-6 py-4 article-box__content"
       >
         <a
           :href="link"
           rel="noopener"
           target="_blank"
-          class="text-center d-block article__link"
+          class="text-center d-flex h-100 align-items-center justify-content-center article__link"
         >
           <img
             :src="require(`~/assets/img/${src}`)"
@@ -26,16 +26,18 @@
           >
         </a>
       </div>
-      <div class="col-sm-6 my-4">
-        <header class="mb-1">
-          <h1 class="h4 article__title">
-            {{ title }}
-          </h1>
-          <time>{{ from }}</time> -
-          <time>{{ to }}</time>
-        </header>
-        <div class="article__botdy">
-          <slot />
+      <div class="col-sm-6 my-4 align-items-center">
+        <div class="px-2">
+          <header class="mb-1">
+            <h1 class="h4 article__title">
+              {{ title }}
+            </h1>
+            <time>{{ from }}</time> -
+            <time>{{ to }}</time>
+          </header>
+          <div class="article__botdy">
+            <slot />
+          </div>
         </div>
       </div>
     </div>
@@ -84,8 +86,10 @@ $width: 3px;
 
 .article-box {
   position: relative;
-  padding: 0 1rem;
+  padding: 0 15px;
   border-radius: 10px;
+  color: #fff;
+  background: $dark;
 }
 
 .article-box--odd {
@@ -102,30 +106,10 @@ $width: 3px;
     transform: scale(1.1);
   }
 }
-
-@include media-breakpoint-up(sm) {
-  .article-box {
-    background: linear-gradient(
-      to right,
-      $body-color,
-      $body-color 50%,
-      #fff 50%
-    );
-    color: #fff;
-  }
-  .article-box--odd {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .article-box--even {
-    background: linear-gradient(
-      to left,
-      $body-color,
-      $body-color 50%,
-      #fff 50%
-    );
-  }
+.article-box__content {
+  background: #fff;
 }
+
 // @media screen {
 // }
 </style>

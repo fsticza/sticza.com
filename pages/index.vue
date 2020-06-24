@@ -327,11 +327,12 @@
           </div>
         </article-box>
 
-        <footer class="mt-3">
+        <footer class="mt-3 text-center">
           <a
             href="https://www.linkedin.com/in/ferenc-sticza-ab9a1814/"
             rel="noopener"
             target="_blank"
+            class="btn btn-sm btn-outline-dark"
           >
             More projects &raquo;
           </a>
