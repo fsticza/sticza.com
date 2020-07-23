@@ -13,7 +13,7 @@
       >
         <a
           :href="link"
-          rel="noopener"
+          rel="noopener noreferrer nofollow"
           target="_blank"
           class="text-center d-flex h-100 align-items-center justify-content-center article__link"
         >
@@ -27,13 +27,16 @@
         </a>
       </div>
       <div class="col-sm-6 my-4 align-items-center">
-        <div class="px-2">
+        <div class="article__content">
           <header class="mb-1">
             <h1 class="h4 article__title">
               {{ title }}
             </h1>
-            <time>{{ from }}</time> -
-            <time>{{ to }}</time>
+            <time>{{ from }}</time>
+            <template v-if="to">
+              -
+              <time>{{ to }}</time>
+            </template>
           </header>
           <div class="article__botdy">
             <slot />
@@ -99,6 +102,15 @@ $width: 3px;
 
 .article__image {
   transition: all 200ms ease-in-out;
+}
+
+.article__content {
+  padding: 0 1.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
 }
 
 .article__link {

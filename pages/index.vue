@@ -289,8 +289,61 @@
         </h1>
 
         <article-box
+          src="ps-logo.svg"
+          title="Servo Movement - Head of Software Engineering"
+          from="2019"
+          to="present"
+          height="70"
+          link="https://servomovement.com/"
+        >
+          <div>
+            <strong>Technologies:</strong> Node.js, MongoDB, Redis, OpenAPI, Vue.js, Vuex, Bootstrap, Sass, HTML5, AWS
+          </div>
+        </article-box>
+
+        <article-box
+          :is-odd="false"
+          src="logo-in-a-day.svg"
+          title="Logo in a day - Full-Stack JavaScript Engineer"
+          from="2020"
+          to="2020"
+          height="100"
+          link="https://logo.kobi.design/"
+        >
+          <div>
+            <strong>Technologies:</strong> Nuxt.js, Vue.js, Vuex, AWS
+          </div>
+        </article-box>
+
+        <article-box
+          src="phe-logo.svg"
+          title="PHE corporate site - Full-Stack JavaScript Engineer"
+          from="2019"
+          height="140"
+          link="https://pheproject.hu/"
+        >
+          <div>
+            <strong>Technologies:</strong> JAMstack, Netlify CMS, Vue.js, Vuex, Bootstrap, Sass, HTML5
+          </div>
+        </article-box>
+
+        <article-box
+          :is-odd="false"
+          src="peak-wallet.png"
+          title="PeakWallet - React Native Mobile Developer"
+          from="2019"
+          to="2018"
+          height="140"
+          link="https://play.google.com/store/apps/details?id=com.peak.peakwallet"
+        >
+          <div>
+            <strong>Technologies:</strong> React Native, React, Redux
+          </div>
+        </article-box>
+
+        <article-box
           src="anda.png"
-          title="ANDA Present - Full-Stack JavaScript Developer"
+          title="ANDA Present - Full-Stack JavaScript Engineer"
           from="JUL 2016"
           to="JUL 2017"
           height="140"
@@ -304,19 +357,19 @@
         <article-box
           :is-odd="false"
           src="expat.png"
-          title="Expat Connect - Full-Stack JavaScript Developer"
+          title="Expat Connect - Full-Stack JavaScript Engineer"
           from="DEC 2014"
           to="JUL 2016"
           link="https://expatconnect.com/"
         >
           <div>
-            <strong>Technologies:</strong> Node.js, Dust.js, Backbone.js, jQuery, Bootstrap, Sass, HTML5
+            <strong>Technologies:</strong> Node.js, Dust.js, Backbone.js, jQuery, Bootstrap, Sass, HTML5, AWS
           </div>
         </article-box>
 
         <article-box
           src="eer-logo.svg"
-          title="EÉR - Electronic Sales System - Full-Stack JavaScript Developer"
+          title="EÉR - Electronic Sales System - Full-Stack JavaScript Engineer"
           from="AUG 2014"
           to="DEC 2014"
           height="140"
