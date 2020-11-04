@@ -1,48 +1,37 @@
 <template>
   <article
-    :class="[!isOdd ? 'article-box--even' : 'article-box--odd']"
-    class="article-box"
+    class="card mb-4 animated-card"
   >
-    <div
-      :class="{ 'text-md-right': isOdd }"
-      class="row"
-    >
-      <div
-        :class="{ 'order-sm-2': isOdd }"
-        class="col-sm-6 py-4 article-box__content"
+    <div class="card-img-top article-top d-flex align-items-center">
+      <img
+        class="mx-auto d-block article-img"
+        :src="require(`~/assets/img/${src}`)"
+        loading="lazy"
+        :height="height"
+        alt="Logo"
       >
-        <a
-          :href="link"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-          class="text-center d-flex h-100 align-items-center justify-content-center article__link"
-        >
-          <img
-            :src="require(`~/assets/img/${src}`)"
-            loading="lazy"
-            :height="height"
-            class="d-inline-block bg-white p-2 article__image"
-            alt="Logo"
-          >
-        </a>
+    </div>
+    <div class="card-body">
+      <header class="mb-1">
+        <h1 class="h4 card-title">
+          {{ title }}
+        </h1>
+        <time>{{ from }}</time>
+        <template v-if="to">
+          -
+          <time>{{ to }}</time>
+        </template>
+      </header>
+      <div class="card-text">
+        <slot />
       </div>
-      <div class="col-sm-6 my-4 align-items-center">
-        <div class="article__content">
-          <header class="mb-1">
-            <h1 class="h4 article__title">
-              {{ title }}
-            </h1>
-            <time>{{ from }}</time>
-            <template v-if="to">
-              -
-              <time>{{ to }}</time>
-            </template>
-          </header>
-          <div class="article__botdy">
-            <slot />
-          </div>
-        </div>
-      </div>
+      <a
+        :href="link"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+        class="stretched-link"
+      ><span class="sr-only">Let me see</span>
+      </a>
     </div>
   </article>
 </template>
@@ -85,43 +74,29 @@ export default {
 <style lang="scss">
 @import './assets/scss/abstracts/variables';
 
-$width: 3px;
-
-.article-box {
-  position: relative;
-  padding: 0 15px;
-  border-radius: 10px;
-  color: #fff;
+.article-top {
+  height: 200px;
+}
+.article-img {
+  transition: transform 0.8s;
+}
+.card-body {
+  transition: all 0.8s;
+  box-shadow: 0 -1px 0 lighten($dark, 75%);
   background: $dark;
-}
-
-.article-box--odd {
-  background: $body-color;
   color: #fff;
 }
-
-.article__image {
-  transition: all 200ms ease-in-out;
-}
-
-.article__content {
-  padding: 0 1.125rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-
-}
-
-.article__link {
-  &:hover .article__image {
-    transform: scale(1.1);
+.animated-card {
+  &:hover {
+    .article-img {
+      transform: scale(1.1);
+    }
+    .card-body {
+      background-color: #fff;
+      color: $dark;
+    }
   }
 }
-.article-box__content {
-  background: #fff;
-}
 
-// @media screen {
-// }
+
 </style>
