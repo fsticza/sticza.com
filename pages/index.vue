@@ -54,7 +54,7 @@
             </a>
             <a
               class="d-inline-block my-3 ml-3"
-              href="/Ferenc_Sticza_Full-Stack_JavaScript_Engineer.pdf"
+              href="https://github.com/fsticza/sticza.com/raw/master/static/Ferenc_Sticza_Full-Stack_JavaScript_Engineer.pdf"
               target="_blank"
             >
               <svg
