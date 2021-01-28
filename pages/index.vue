@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <section class="section bg-img-secondary vcard">
+    <section class="section bg-img-secondary vcard inner-shadow">
       <div class="container">
         <div class="row align-items-center text-center">
           <div class="col-sm-6 text-md-left">
@@ -370,6 +370,10 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/abstracts/variables';
+
+.inner-shadow {
+  box-shadow: inset 0 0 10px #999;
+}
 
 .avatar-wrapper {
   background: #000;
