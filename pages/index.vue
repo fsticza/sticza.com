@@ -86,7 +86,7 @@
           About
         </h1>
         <p class="text-justify">
-          Quality-driven and motivated Full-Stack JavaScript Engineer with 10+ years
+          Quality-driven and motivated Full-Stack JavaScript Engineer with 15+ years
           of extensive experience.
           Adept at leading, training, supervising and determined to achieve
           extraordinary results.
@@ -105,6 +105,19 @@
         <div class="row">
           <div class="col-md-6">
             <article-box
+              src="webshippy-logo.svg"
+              title="Webshippy - Lead Front-end Engineer"
+              from="2021"
+              height="140"
+              link="https://app.webshippy.com/register/index/"
+            >
+              <div>
+                <strong>Technologies:</strong> React, Redux, OpenAPI, Bootstrap, Sass, HTML5, Docker
+              </div>
+            </article-box>
+          </div>
+          <div class="col-md-6">
+            <article-box
               src="ebikeshopgo.svg"
               title="Ebikeshopgo - Full-Stack JavaScript Engineer"
               from="2020"
@@ -121,25 +134,12 @@
               src="ps-logo.svg"
               title="Servo Movement - Head of Software Engineering"
               from="2019"
-              to="present"
+              to="2021"
               height="70"
               link="https://powershare.hu/"
             >
               <div>
                 <strong>Technologies:</strong> Node.js, MongoDB, Redis, OpenAPI, Vue.js, Vuex, Bootstrap, Sass, HTML5, AWS, Docker
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="logo-in-a-day.svg"
-              title="Logo in a day - Full-Stack JavaScript Engineer"
-              from="2020"
-              height="100"
-              link="https://logo.kobi.design/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, MongoDB, Nuxt.js, Vue.js, Vuex, Bootstrap, Sass, HTML5, AWS, Docker
               </div>
             </article-box>
           </div>
@@ -161,8 +161,8 @@
             <article-box
               src="anda.png"
               title="ANDA Present - Full-Stack JavaScript Engineer"
-              from="JUL 2016"
-              to="JUL 2017"
+              from="2016"
+              to="2017"
               height="140"
               link="https://andapresent.com/row/en"
             >
@@ -173,23 +173,9 @@
           </div>
           <div class="col-md-6">
             <article-box
-              src="expat.png"
-              title="Expat Connect - Full-Stack JavaScript Engineer"
-              from="DEC 2014"
-              to="JUL 2016"
-              link="https://expatconnect.com/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, Dust.js, Backbone.js, jQuery, Bootstrap, Sass, HTML5, AWS
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
               src="eer-logo.svg"
               title="EÉR - Electronic Sales System - Full-Stack JavaScript Engineer"
-              from="AUG 2014"
-              to="DEC 2014"
+              from="2014"
               height="120"
               link="https://eer.gov.hu/"
             >
