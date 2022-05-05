@@ -71,7 +71,7 @@
     <footer class="bg-img-secondary main-footer text-center">
       <div class="container">
         <div>
-          2020 &copy; Ferenc Sticza
+          2022 &copy; Ferenc Sticza
         </div>
       </div>
     </footer>

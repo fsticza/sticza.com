@@ -86,14 +86,14 @@
           About
         </h1>
         <p class="text-justify">
-          Quality-driven and motivated Full-Stack JavaScript Engineer with 15+ years
+          Quality-driven, motivated Full-Stack JavaScript Engineer with 15+ years
           of extensive experience.
           Adept at leading, training, supervising and determined to achieve
           extraordinary results.
         </p>
         <p>
           Current preferred development stack: <br>
-          Linux, Docker, Git, OpenAPI, Node.js, Webpack, React or Vue.js and CSS processors.
+          Linux, Kubernetes, Docker, Git, OpenAPI/AsyncAPI, Node.js, Knative, Kafka, Jest, TypeScript, React or Vue.js.
         </p>
       </section>
 
@@ -105,27 +105,42 @@
         <div class="row">
           <div class="col-md-6">
             <article-box
-              src="webshippy-logo.svg"
-              title="Webshippy - Lead Front-end Engineer"
+              src="bh-logo-circle.svg"
+              title="Magyar Bankholding - Full-Stack JavaScript Engineer"
               from="2021"
+              to="2022"
               height="140"
-              link="https://app.webshippy.com/register/index/"
+              link="https://www.magyarbankholding.hu/en"
             >
               <div>
-                <strong>Technologies:</strong> React, Redux, OpenAPI, Bootstrap, Sass, HTML5, Docker
+                <strong>Technologies:</strong> Fastify, Kafka, Jest, IBMMQ, AsyncAPI, OpenAPI, Kubernetes, TypeScript, Docker, AWS
               </div>
             </article-box>
           </div>
           <div class="col-md-6">
             <article-box
-              src="ebikeshopgo.svg"
-              title="Ebikeshopgo - Full-Stack JavaScript Engineer"
-              from="2020"
-              height="70"
-              link="https://ebikeshopgo.hu/"
+              src="nvi-logo.svg"
+              title="Election Information System - Tech Lead"
+              from="2021"
+              to="2022"
+              height="100"
+              link="https://vtr.valasztas.hu/"
             >
               <div>
-                <strong>Technologies:</strong> Node.js, MongoDB, Redis, OpenAPI, Vue.js, Vuex, Bootstrap, Sass, HTML5, AWS, Docker
+                <strong>Technologies:</strong> Node.js, React, Redux, Jest, TypeScript, OpenAPI, Docker, monorepo
+              </div>
+            </article-box>
+          </div>
+          <div class="col-md-6">
+            <article-box
+              src="webshippy-logo.svg"
+              title="Webshippy - Tech Lead, Lead Front-end Engineer"
+              from="2021"
+              height="140"
+              link="https://app.webshippy.com/register/index/"
+            >
+              <div>
+                <strong>Technologies:</strong> Node.js, React, Redux, Jest, TypeScript, OpenAPI, Docker
               </div>
             </article-box>
           </div>
@@ -139,7 +154,7 @@
               link="https://powershare.hu/"
             >
               <div>
-                <strong>Technologies:</strong> Node.js, MongoDB, Redis, OpenAPI, Vue.js, Vuex, Bootstrap, Sass, HTML5, AWS, Docker
+                <strong>Technologies:</strong> Node.js, MongoDB, Redis, AVA, OpenAPI, TypeScript, Vue.js, Vuex, AWS, Docker, monorepo
               </div>
             </article-box>
           </div>
@@ -153,7 +168,7 @@
               link="https://play.google.com/store/apps/details?id=com.peak.peakwallet"
             >
               <div>
-                <strong>Technologies:</strong> React Native, React, Redux
+                <strong>Technologies:</strong> React Native, React, Redux, Jest
               </div>
             </article-box>
           </div>
@@ -167,7 +182,7 @@
               link="https://andapresent.com/row/en"
             >
               <div>
-                <strong>Technologies:</strong> Node.js, Handlebars.js, Backbone.js, jQuery, Bootstrap 4, Sass, HTML5
+                <strong>Technologies:</strong> Node.js, Handlebars.js, Backbone.js, jQuery, Bootstrap 4, Sass
               </div>
             </article-box>
           </div>
@@ -180,7 +195,7 @@
               link="https://eer.gov.hu/"
             >
               <div>
-                <strong>Technologies:</strong> Node.js, Kraken.js, Dust.js, Bootstrap 3, Less, HTML5
+                <strong>Technologies:</strong> Node.js, Kraken.js, Dust.js, Bootstrap 3, Less
               </div>
             </article-box>
           </div>
@@ -214,7 +229,7 @@
               height="140"
             >
               <div>
-                <strong>Technologies:</strong> Node.js, MongoDB, OpenAPI, Webpack, Git, Vue.js, React, React Native, HTML5, Bootstrap
+                <strong>Technologies:</strong> Node.js, Redis, Kafka, MongoDB, OpenAPI, Webpack, Git, Vue.js, React, React Native
               </div>
               <div>
                 <strong>Role:</strong> Full-Stack JavaScript development, cross-platform
