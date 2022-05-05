@@ -99,7 +99,7 @@
 
       <section class="section section--bordered section--projects">
         <h1 class="section__title">
-          Projects
+          Latest projects
         </h1>
 
         <div class="row">
@@ -131,6 +131,8 @@
               </div>
             </article-box>
           </div>
+        </div>
+        <div class="row">
           <div class="col-md-6">
             <article-box
               src="webshippy-logo.svg"
@@ -158,55 +160,15 @@
               </div>
             </article-box>
           </div>
-          <div class="col-md-6">
-            <article-box
-              src="peak-wallet.png"
-              title="PeakWallet - React Native Mobile Developer"
-              from="2019"
-              to="2018"
-              height="140"
-              link="https://play.google.com/store/apps/details?id=com.peak.peakwallet"
-            >
-              <div>
-                <strong>Technologies:</strong> React Native, React, Redux, Jest
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="anda.png"
-              title="ANDA Present - Full-Stack JavaScript Engineer"
-              from="2016"
-              to="2017"
-              height="140"
-              link="https://andapresent.com/row/en"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, Handlebars.js, Backbone.js, jQuery, Bootstrap 4, Sass
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="eer-logo.svg"
-              title="EÉR - Electronic Sales System - Full-Stack JavaScript Engineer"
-              from="2014"
-              height="120"
-              link="https://eer.gov.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, Kraken.js, Dust.js, Bootstrap 3, Less
-              </div>
-            </article-box>
-          </div>
         </div>
+        
 
-        <footer class="mt-4 text-center">
+        <footer class="mt-4 text-center page-break">
           <a
             href="https://www.linkedin.com/in/ferenc-sticza-ab9a1814/"
             rel="noopener"
             target="_blank"
-            class="btn btn-sm btn-dark"
+            class="btn btn-sm btn-dark no-print"
           >
             More projects &raquo;
           </a>
@@ -219,7 +181,7 @@
           Experience
         </h1>
 
-        <div class="row">
+        <div class="row page-break">
           <div class="col-md-6">
             <article-box
               src="logo-v2.svg"
@@ -321,11 +283,11 @@
               link="https://www.doclerholding.com/en/main/"
             >
               <div>
-                <strong>Technologies:</strong> XHTML, CSS, PHP, JavaScript (jQuery), SVN
+                <strong>Technologies:</strong> XHTML, CSS, PHP, jQuery, SVN
               </div>
               <div>
                 <strong>Role:</strong> Client side development of docler.hu – social-
-                and video sharing portal as well as other other frequented sites in Docler Holding.
+                and video sharing portal.
               </div>
             </article-box>
           </div>
@@ -386,13 +348,37 @@ export default {
   text-align: center;
 }
 
+@page {
+  margin: 0;
+
+  :first {
+    margin-top: 0;
+    padding-top: 0;
+  } 
+}
+
 @media print {
   body {
     padding-top: 0;
+    margin: 0;
     -webkit-print-color-adjust: exact !important;
   }
   article {
     page-break-inside: avoid;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+  .main-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  .no-print {
+    display: none;
+  }
+  .section--bordered:not(:first-child) {
+    border-color: transparent;
   }
 }
 </style>
