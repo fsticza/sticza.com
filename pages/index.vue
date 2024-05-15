@@ -105,6 +105,21 @@
         <div class="row">
           <div class="col-md-6">
             <article-box
+              src="fizz.svg"
+              title="Fizz - Principal Software Engineer"
+              from="2024"
+              to="2022"
+              height="70"
+              link="https://fizz.hu/"
+            >
+              <div>
+                <strong>Technologies:</strong> Node.js, Fastify, Kafka, PostgreSQL, MongoDB, Redis, Jest, OpenAPI, 
+                AsyncApi, TypeScript, AJV, React, Azure, Kubernetes, monorepo
+              </div>
+            </article-box>
+          </div>
+          <div class="col-md-6">
+            <article-box
               src="bh-logo-circle.svg"
               title="Magyar Bankholding - Full-Stack JavaScript Engineer"
               from="2021"
@@ -113,10 +128,13 @@
               link="https://www.magyarbankholding.hu/en"
             >
               <div>
-                <strong>Technologies:</strong> Fastify, Kafka, Jest, IBMMQ, AsyncAPI, OpenAPI, Kubernetes, TypeScript, Docker, AWS
+                <strong>Technologies:</strong> Node.js, Fastify, Kafka, Jest, IBMMQ, AsyncAPI, OpenAPI, AsyncApi, AJV, 
+                Kubernetes, TypeScript, Kubernetes, Azure, AWS
               </div>
             </article-box>
           </div>
+        </div>
+        <div class="row">
           <div class="col-md-6">
             <article-box
               src="nvi-logo.svg"
@@ -131,8 +149,6 @@
               </div>
             </article-box>
           </div>
-        </div>
-        <div class="row">
           <div class="col-md-6">
             <article-box
               src="webshippy-logo.svg"
@@ -146,22 +162,7 @@
               </div>
             </article-box>
           </div>
-          <div class="col-md-6">
-            <article-box
-              src="ps-logo.svg"
-              title="Servo Movement - Head of Software Engineering"
-              from="2019"
-              to="2021"
-              height="70"
-              link="https://powershare.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, MongoDB, Redis, AVA, OpenAPI, TypeScript, Vue.js, Vuex, AWS, Docker, monorepo
-              </div>
-            </article-box>
-          </div>
         </div>
-        
 
         <footer class="mt-4 text-center page-break">
           <a

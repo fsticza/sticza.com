@@ -82,3 +82,6 @@ dist
 
 # pwa
 sw.*
+
+# Mac
+.DS_Store
