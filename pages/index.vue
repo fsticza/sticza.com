@@ -53,7 +53,7 @@
               </svg>
             </a>
             <a
-              class="d-inline-block my-3 ml-3"
+              class="d-inline-block my-3 ml-3 no-print"
               href="https://github.com/fsticza/sticza.com/raw/master/static/Ferenc-Sticza-CV.pdf"
               target="_blank"
             >
@@ -405,7 +405,7 @@ export default {
     bottom: 0;
   }
   .no-print {
-    display: none;
+    display: none !important;
   }
   .section--bordered:not(:first-child) {
     border-color: transparent;
