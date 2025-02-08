@@ -8,7 +8,7 @@
               Ferenc Sticza
             </h1>
             <h2 class="h4 mb-2">
-              Full-Stack JavaScript Engineer
+              Full-Stack JavaScript/TypeScript Engineer
             </h2>
           </div>
           <div class="col-sm-6 my-2 text-md-right">
@@ -54,7 +54,7 @@
             </a>
             <a
               class="d-inline-block my-3 ml-3"
-              href="https://github.com/fsticza/sticza.com/raw/master/static/Ferenc_Sticza_Full-Stack_JavaScript_Engineer.pdf"
+              href="https://github.com/fsticza/sticza.com/raw/master/static/Ferenc-Sticza-CV.pdf"
               target="_blank"
             >
               <svg
@@ -86,14 +86,14 @@
           About
         </h1>
         <p class="text-justify">
-          Quality-driven, motivated Full-Stack JavaScript Engineer with 15+ years
+          Quality-driven, motivated Full-Stack JavaScript/TypeScript Engineer with 20+ years
           of extensive experience.
           Adept at leading, training, supervising and determined to achieve
           extraordinary results.
         </p>
         <p>
           Current preferred development stack: <br>
-          Linux, Kubernetes, Docker, Git, OpenAPI/AsyncAPI, Node.js, Knative, Kafka, Jest, TypeScript, React or Vue.js.
+          Kubernetes, Docker, Git, OpenAPI/AsyncAPI, Node.js, Kafka, TypeScript, React or Vue.js.
         </p>
       </section>
 
@@ -107,14 +107,44 @@
             <article-box
               src="fizz.svg"
               title="Fizz - Principal Software Engineer"
-              from="2024"
-              to="2022"
+              from="2022"
+              to="2025"
               height="70"
               link="https://fizz.hu/"
             >
               <div>
                 <strong>Technologies:</strong> Node.js, Fastify, Kafka, PostgreSQL, MongoDB, Redis, Jest, OpenAPI, 
-                AsyncApi, TypeScript, AJV, React, Azure, Kubernetes, monorepo
+                AsyncApi, TypeScript, React, Azure, Kubernetes, monorepo
+              </div>
+            </article-box>
+          </div>
+          <div class="col-md-6">
+            <article-box
+              src="netrisk-logo.svg"
+              title="Netrisk - Architect, Consultant"
+              from="2023"
+              to="2025"
+              height="40"
+              link="https://www.netrisk.hu/"
+            >
+              <div>
+                <strong>Technologies:</strong> Node.js, TypeScript, OpenAPI, Fastify, MongoDB, Redis, Docker, Kubernetes, Azure, Vue.js
+              </div>
+            </article-box>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <article-box
+              src="nvi-logo.svg"
+              title="Election Information System - Architect, Tech Lead"
+              from="2023"
+              to="2024"
+              height="100"
+              link="https://vtr.valasztas.hu/"
+            >
+              <div>
+                <strong>Technologies:</strong> Node.js, React, Redux, Jest, TypeScript, OpenAPI, Docker, monorepo
               </div>
             </article-box>
           </div>
@@ -138,7 +168,7 @@
           <div class="col-md-6">
             <article-box
               src="nvi-logo.svg"
-              title="Election Information System - Tech Lead"
+              title="Election Information System - Architect, Tech Lead"
               from="2021"
               to="2022"
               height="100"
@@ -164,7 +194,7 @@
           </div>
         </div>
 
-        <footer class="mt-4 text-center page-break">
+        <footer class="mt-4 text-center">
           <a
             href="https://www.linkedin.com/in/ferenc-sticza-ab9a1814/"
             rel="noopener"
@@ -182,21 +212,21 @@
           Experience
         </h1>
 
-        <div class="row page-break">
+        <div class="row">
           <div class="col-md-6">
             <article-box
-              src="logo-v2.svg"
-              title="Freelance - Full-Stack JavaScript Engineer"
+              src="monad-logo.svg"
+              title="Contractor - Full-Stack Engineer, Consultant"
               from="NOV 2017"
               to="present"
-              height="140"
+              height="80"
+              link="https://monad.hu/"
             >
               <div>
                 <strong>Technologies:</strong> Node.js, Redis, Kafka, MongoDB, OpenAPI, Webpack, Git, Vue.js, React, React Native
               </div>
               <div>
-                <strong>Role:</strong> Full-Stack JavaScript development, cross-platform
-                desktop/mobile/web application development, knowledge sharing.
+                <strong>Role:</strong> Full-Stack TypeScript development, team building, leading, modernizing, consulting.
               </div>
             </article-box>
           </div>
@@ -204,7 +234,7 @@
             <article-box
 
               src="virgo.jpg"
-              title="Virgo Systems - Lead Front-end & Full-Stack JavaScript Developer"
+              title="Virgo Systems - Lead Full-Stack Developer, Architect"
               from="SEP 2013"
               to="JUL 2017"
               height="120"
@@ -212,11 +242,10 @@
             >
               <div>
                 <strong>Technologies:</strong> Node.js, Webpack, Grunt, Vue.js, Backbone.js,
-                jQuery, HTML5, SVG, CSS3 (LESS, SASS), various template engines, responsive design, Git, Redis, MongoDB
+                jQuery, HTML5, SVG, CSS3 (LESS, SASS), various template engines, Git, Redis, MongoDB
               </div>
               <div>
-                <strong>Role:</strong> Tech lead, mentoring, creating web
-                interface of API based social and e-commerce applications (expatconnect.com, eer.gov.hu, etc.).
+                <strong>Role:</strong> Tech lead, mentoring, creating social and e-commerce applications.
               </div>
             </article-box>
           </div>
