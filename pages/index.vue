@@ -3,15 +3,15 @@
     <section class="section bg-img-secondary vcard inner-shadow">
       <div class="container">
         <div class="row align-items-center text-center">
-          <div class="col-sm-6 text-md-left">
+          <div class="col-sm-8 text-md-left">
             <h1 class="section__title mb-1">
               Ferenc Sticza
             </h1>
             <h2 class="h4 mb-2">
-              Full-Stack JavaScript/TypeScript Engineer
+              Full-Stack TypeScript Engineer, Architect, Consultant
             </h2>
           </div>
-          <div class="col-sm-6 my-2 text-md-right">
+          <div class="col-sm-4 my-2 text-md-right">
             <a
               class="d-inline-block m-3"
               href="https://github.com/fsticza"
@@ -86,14 +86,11 @@
           About
         </h1>
         <p class="text-justify">
-          Quality-driven, motivated Full-Stack JavaScript/TypeScript Engineer with 20+ years
-          of extensive experience.
-          Adept at leading, training, supervising and determined to achieve
-          extraordinary results.
+          Quality-driven, motivated Full-Stack JavaScript/TypeScript Engineer with 20+ years of experience. Adept at leading and mentoring teams, with a strong track record in enterprise consulting for platform engineering, modernizing architectures, and optimizing cloud costs. Determined to achieve extraordinary results through scalable, future-proof solutions.
         </p>
         <p>
           Current preferred development stack: <br>
-          Kubernetes, Docker, Git, OpenAPI/AsyncAPI, Node.js, Kafka, TypeScript, React or Vue.js.
+          Kubernetes, Docker, GitOps, OpenAPI/AsyncAPI, Node.js, Kafka, TypeScript, React or Vue.js.
         </p>
       </section>
 
@@ -105,19 +102,34 @@
         <div class="row">
           <div class="col-md-6">
             <article-box
+              src="idomsoft.svg"
+              title="IdomSoft - Platform Engineering & Architecture Consultant"
+              from="2023"
+              to="2025"
+              height="46"
+              link="https://idomsoft.hu/"
+            >
+              <div>
+                <strong>Technologies:</strong> Oracle Cloud, Kubernetes, GitOps, ArgoCD, Helm, Terraform, Node.js, TypeScript, React
+              </div>
+            </article-box>
+          </div>
+          <div class="col-md-6">
+            <article-box
               src="fizz.svg"
-              title="Fizz - Principal Software Engineer"
+              title="Fizz - Technical lead of Platform Engineering & Architecture"
               from="2022"
               to="2025"
               height="70"
               link="https://fizz.hu/"
             >
               <div>
-                <strong>Technologies:</strong> Node.js, Fastify, Kafka, PostgreSQL, MongoDB, Redis, Jest, OpenAPI, 
-                AsyncApi, TypeScript, React, Azure, Kubernetes, monorepo
+                <strong>Technologies:</strong> Node.js, Kafka, PostgreSQL, MongoDB, Redis, API doc, TypeScript, React, Azure, Kubernetes
               </div>
             </article-box>
           </div>
+        </div>
+        <div class="row">
           <div class="col-md-6">
             <article-box
               src="netrisk-logo.svg"
@@ -129,22 +141,6 @@
             >
               <div>
                 <strong>Technologies:</strong> Node.js, TypeScript, OpenAPI, Fastify, MongoDB, Redis, Docker, Kubernetes, Azure, Vue.js
-              </div>
-            </article-box>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <article-box
-              src="nvi-logo.svg"
-              title="Election Information System - Architect, Tech Lead"
-              from="2023"
-              to="2024"
-              height="100"
-              link="https://vtr.valasztas.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, React, Redux, Jest, TypeScript, OpenAPI, Docker, monorepo
               </div>
             </article-box>
           </div>
@@ -163,35 +159,7 @@
               </div>
             </article-box>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <article-box
-              src="nvi-logo.svg"
-              title="Election Information System - Architect, Tech Lead"
-              from="2021"
-              to="2022"
-              height="100"
-              link="https://vtr.valasztas.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, React, Redux, Jest, TypeScript, OpenAPI, Docker, monorepo
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="webshippy-logo.svg"
-              title="Webshippy - Tech Lead, Lead Front-end Engineer"
-              from="2021"
-              height="140"
-              link="https://app.webshippy.com/register/index/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, React, Redux, Jest, TypeScript, OpenAPI, Docker
-              </div>
-            </article-box>
-          </div>
+        
         </div>
 
         <footer class="mt-4 text-center">
@@ -219,7 +187,7 @@
               title="Contractor - Full-Stack Engineer, Consultant"
               from="NOV 2017"
               to="present"
-              height="80"
+              height="90"
               link="https://monad.hu/"
             >
               <div>
@@ -242,7 +210,7 @@
             >
               <div>
                 <strong>Technologies:</strong> Node.js, Webpack, Grunt, Vue.js, Backbone.js,
-                jQuery, HTML5, SVG, CSS3 (LESS, SASS), various template engines, Git, Redis, MongoDB
+                jQuery, HTML5, SVG, CSS3, template engines, Git, Redis, MongoDB
               </div>
               <div>
                 <strong>Role:</strong> Tech lead, mentoring, creating social and e-commerce applications.
@@ -281,7 +249,7 @@
               </div>
               <div>
                 <strong>Role:</strong> Front-end development of iwiw.hu social networking
-                service and other Virgo related sites (klapp.hu, aranyoldalak.hu, ado.hu, etterem.hu, etc.).
+                service web applications.
               </div>
             </article-box>
           </div>
@@ -379,12 +347,18 @@ export default {
 }
 
 @page {
-  margin: 0;
+  size: A4;
+  margin:0;
+  min-height: 100vh;
 
   :first {
     margin-top: 0;
     padding-top: 0;
-  } 
+  }
+
+  :last {
+    height: 100%;
+  }
 }
 
 @media print {
@@ -392,18 +366,19 @@ export default {
     padding-top: 0;
     margin: 0;
     -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    min-height: 100vh;
   }
   article {
     page-break-inside: avoid;
   }
-  .page-break {
-    page-break-after: always;
-  }
+
   .main-footer {
     position: fixed;
     width: 100%;
     bottom: 0;
   }
+
   .no-print {
     display: none !important;
   }

@@ -13,7 +13,7 @@
     </div>
     <div class="card-body">
       <header class="mb-1">
-        <h1 class="h4 card-title">
+        <h1 class="h5 card-title">
           {{ title }}
         </h1>
         <time>{{ from }}</time>
@@ -75,7 +75,7 @@ export default {
 @import './assets/scss/abstracts/variables';
 
 .article-top {
-  height: 200px;
+  height: 170px;
 }
 .article-img {
   transition: transform 0.8s;
