@@ -1,7 +1,7 @@
 {
   "name": "sticza.com",
   "version": "1.0.0",
-  "description": "Ferenc Sticza - Embrace change with flexible technologies",
+  "description": "Ferenc Sticza - Senior Full-Stack JavaScript/TypeScript Engineer focused on backend, platform engineering, cloud-native systems, and reliable product delivery.",
   "author": "Ferenc Sticza",
   "private": true,
   "scripts": {
@@ -11,6 +11,9 @@
     "generate": "nuxt generate",
     "imagemin": "node ./imagemin.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "pdf": "npm run generate && \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --run-all-compositor-stages-before-draw --virtual-time-budget=5000 --no-pdf-header-footer --print-to-pdf=\"$PWD/static/Ferenc-Sticza-CV.pdf\" \"file://$PWD/dist/index.html\"",
+    "pdf:ats": "npm run generate && \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --run-all-compositor-stages-before-draw --virtual-time-budget=5000 --no-pdf-header-footer --print-to-pdf=\"$PWD/static/Ferenc-Sticza-ATS-CV.pdf\" \"file://$PWD/dist/cv-ats/index.html\"",
+    "pdf:all": "npm run pdf && npm run pdf:ats",
     "precommit": "npm run lint",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",

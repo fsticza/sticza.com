@@ -1,389 +1,638 @@
 <template>
-  <div class="index">
-    <section class="section bg-img-secondary vcard inner-shadow">
+  <main class="homepage">
+    <section class="hero-section">
       <div class="container">
-        <div class="row align-items-center text-center">
-          <div class="col-sm-8 text-md-left">
-            <h1 class="section__title mb-1">
-              Ferenc Sticza
+        <div class="hero-card row align-items-center">
+          <div class="col-lg-8">
+            <p class="eyebrow">
+              Open to Staff+ engineering roles
+            </p>
+            <h1 class="hero-title">
+              {{ profile.name }}
             </h1>
-            <h2 class="h4 mb-2">
-              Full-Stack TypeScript Engineer, Architect, Consultant
-            </h2>
+            <p class="hero-role">
+              {{ profile.title }}
+            </p>
+            <div class="hero-summary">
+              <p
+                v-for="line in profile.summary"
+                :key="line"
+              >
+                {{ line }}
+              </p>
+            </div>
+            <p class="hero-highlight">
+              {{ profile.highlight }}
+            </p>
+            <div class="hero-proof-grid">
+              <article
+                v-for="proof in proofPoints"
+                :key="proof.label"
+                class="hero-proof-card"
+              >
+                <p class="hero-proof-value">
+                  {{ proof.value }}
+                </p>
+                <p class="hero-proof-label mb-0">
+                  {{ proof.label }}
+                </p>
+              </article>
+            </div>
+            <div class="hero-cta">
+              <a
+                class="btn btn-dark btn-lg mr-3 mb-3"
+                href="#projects"
+              >
+                See impact stories
+              </a>
+              <a
+                class="btn btn-outline-dark btn-lg mb-3"
+                href="mailto:ferenc@sticza.com"
+              >
+                Email me directly
+              </a>
+            </div>
+            <p class="availability-note mb-0">
+              Based in Hungary, working CET / CEST, and open to backend, platform, or full-stack Staff+ IC roles.
+            </p>
           </div>
-          <div class="col-sm-4 my-2 text-md-right">
-            <a
-              class="d-inline-block m-3"
-              href="https://github.com/fsticza"
-              rel="noopener"
-              target="_blank"
-            >
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-              >
-                <title>Github</title>
-                <path
-                  fill="currentColor"
-                  d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"
-                />
-              </svg>
-            </a>
-            <a
-              class="d-inline-block m-3"
-              href="https://www.linkedin.com/in/ferenc-sticza-ab9a1814/"
-              rel="noopener"
-              target="_blank"
-            >
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-              >
-                <title>LinkedIn</title>
-                <path
-                  fill="currentColor"
-                  d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"
-                />
-              </svg>
-            </a>
-            <a
-              class="d-inline-block my-3 ml-3 no-print"
-              href="https://github.com/fsticza/sticza.com/raw/master/static/Ferenc-Sticza-CV.pdf"
-              target="_blank"
-            >
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-              >
-                <title>Print preview</title>
-                <path
-                  fill="currentColor"
-                  d="M26.313 18.421c-0.427-0.42-1.372-0.643-2.812-0.662-0.974-0.011-2.147 0.075-3.38 0.248-0.552-0.319-1.122-0.665-1.568-1.083-1.202-1.122-2.205-2.68-2.831-4.394 0.041-0.16 0.075-0.301 0.108-0.444 0 0 0.677-3.846 0.498-5.146-0.025-0.178-0.040-0.23-0.088-0.369l-0.059-0.151c-0.184-0.425-0.545-0.875-1.111-0.85l-0.341-0.011c-0.631 0-1.146 0.323-1.281 0.805-0.411 1.514 0.013 3.778 0.781 6.711l-0.197 0.478c-0.55 1.34-1.238 2.689-1.846 3.88l-0.079 0.155c-0.639 1.251-1.22 2.313-1.745 3.213l-0.543 0.287c-0.040 0.021-0.97 0.513-1.188 0.645-1.852 1.106-3.079 2.361-3.282 3.357-0.065 0.318-0.017 0.725 0.313 0.913l0.525 0.264c0.228 0.114 0.468 0.172 0.714 0.172 1.319 0 2.85-1.643 4.959-5.324 2.435-0.793 5.208-1.452 7.638-1.815 1.852 1.043 4.129 1.767 5.567 1.767 0.255 0 0.475-0.024 0.654-0.072 0.276-0.073 0.508-0.23 0.65-0.444 0.279-0.42 0.335-0.998 0.26-1.59-0.023-0.176-0.163-0.393-0.315-0.541zM6.614 25.439c0.241-0.658 1.192-1.958 2.6-3.111 0.088-0.072 0.306-0.276 0.506-0.466-1.472 2.348-2.458 3.283-3.106 3.577zM14.951 6.24c0.424 0 0.665 1.069 0.685 2.070s-0.214 1.705-0.505 2.225c-0.241-0.77-0.357-1.984-0.357-2.778 0 0-0.018-1.517 0.177-1.517v0zM12.464 19.922c0.295-0.529 0.603-1.086 0.917-1.677 0.765-1.447 1.249-2.58 1.609-3.511 0.716 1.303 1.608 2.41 2.656 3.297 0.131 0.111 0.269 0.222 0.415 0.333-2.132 0.422-3.974 0.935-5.596 1.558v0zM25.903 19.802c-0.13 0.081-0.502 0.128-0.741 0.128-0.772 0-1.727-0.353-3.066-0.927 0.515-0.038 0.986-0.057 1.409-0.057 0.774 0 1.004-0.003 1.761 0.19s0.767 0.585 0.637 0.667v0z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.121 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841v0zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268v0zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"
-                />
-              </svg>
-            </a>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="hero-profile-card">
+              <dl class="hero-facts mb-0">
+                <div
+                  v-for="fact in heroFacts"
+                  :key="fact.label"
+                  class="hero-fact"
+                >
+                  <dt>{{ fact.label }}</dt>
+                  <dd>{{ fact.value }}</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="container">
-      <section class="section section--bordered">
-        <h1 class="section__title">
-          About
-        </h1>
-        <p class="text-justify">
-          Quality-driven, motivated Full-Stack JavaScript/TypeScript Engineer with 20+ years of experience. Adept at leading and mentoring teams, with a strong track record in enterprise consulting for platform engineering, modernizing architectures, and optimizing cloud costs. Determined to achieve extraordinary results through scalable, future-proof solutions.
-        </p>
-        <p>
-          Current preferred development stack: <br>
-          Kubernetes, Docker, GitOps, OpenAPI/AsyncAPI, Node.js, Kafka, TypeScript, React or Vue.js.
-        </p>
-      </section>
-
-      <section class="section section--bordered section--projects">
-        <h1 class="section__title">
-          Latest projects
-        </h1>
-
-        <div class="row">
-          <div class="col-md-6">
-            <article-box
-              src="idomsoft.svg"
-              title="IdomSoft - Platform Engineering & Architecture Consultant"
-              from="2023"
-              to="2025"
-              height="46"
-              link="https://idomsoft.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Oracle Cloud, Kubernetes, GitOps, ArgoCD, Helm, Terraform, Node.js, TypeScript, React
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="fizz.svg"
-              title="Fizz - Technical lead of Platform Engineering & Architecture"
-              from="2022"
-              to="2025"
-              height="70"
-              link="https://fizz.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, Kafka, PostgreSQL, MongoDB, Redis, API doc, TypeScript, React, Azure, Kubernetes
-              </div>
-            </article-box>
-          </div>
+    <div class="container page-sections">
+      <section
+        id="experience"
+        class="content-section"
+      >
+        <div class="section-heading">
+          <p class="section-kicker">
+            Professional Experience
+          </p>
+          <h2 class="section-title">
+            Experience shaped by consulting, product delivery, and architecture work
+          </h2>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <article-box
-              src="netrisk-logo.svg"
-              title="Netrisk - Architect, Consultant"
-              from="2023"
-              to="2025"
-              height="40"
-              link="https://www.netrisk.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, TypeScript, OpenAPI, Fastify, MongoDB, Redis, Docker, Kubernetes, Azure, Vue.js
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="bh-logo-circle.svg"
-              title="Magyar Bankholding - Full-Stack JavaScript Engineer"
-              from="2021"
-              to="2022"
-              height="140"
-              link="https://www.magyarbankholding.hu/en"
-            >
-              <div>
-                <strong>Technologies:</strong> Node.js, Fastify, Kafka, Jest, IBMMQ, AsyncAPI, OpenAPI, AsyncApi, AJV, 
-                Kubernetes, TypeScript, Kubernetes, Azure, AWS
-              </div>
-            </article-box>
-          </div>
-        
-        </div>
-
-        <footer class="mt-4 text-center">
-          <a
-            href="https://www.linkedin.com/in/ferenc-sticza-ab9a1814/"
-            rel="noopener"
-            target="_blank"
-            class="btn btn-sm btn-dark no-print"
+        <div class="timeline">
+          <article
+            v-for="entry in featuredExperience"
+            :key="`${entry.company}-${entry.dateRange}`"
+            class="experience-card surface-card"
           >
-            More projects &raquo;
-          </a>
-        </footer>
-      </section>
-
-
-      <section class="section section--bordered">
-        <h1 class="section__title">
-          Experience
-        </h1>
-
-        <div class="row">
-          <div class="col-md-6">
-            <article-box
-              src="monad-logo.svg"
-              title="Contractor - Full-Stack Engineer, Consultant"
-              from="NOV 2017"
-              to="present"
-              height="90"
-              link="https://monad.hu/"
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-title">
+                  {{ entry.jobTitle }}
+                </h3>
+                <p class="experience-company mb-2">
+                  {{ entry.company }}
+                </p>
+              </div>
+              <p class="experience-date mb-0">
+                {{ entry.dateRange }}
+              </p>
+            </div>
+            <p class="experience-summary">
+              {{ entry.summary }}
+            </p>
+            <p
+              v-if="!entry.compact"
+              class="stack-label"
             >
-              <div>
-                <strong>Technologies:</strong> Node.js, Redis, Kafka, MongoDB, OpenAPI, Webpack, Git, Vue.js, React, React Native
-              </div>
-              <div>
-                <strong>Role:</strong> Full-Stack TypeScript development, team building, leading, modernizing, consulting.
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-
-              src="virgo.jpg"
-              title="Virgo Systems - Lead Full-Stack Developer, Architect"
-              from="SEP 2013"
-              to="JUL 2017"
-              height="120"
-              link="https://systems.virgo.hu/"
+              Core stack: {{ entry.stack.join(', ') }}
+            </p>
+            <ul
+              v-if="!entry.compact"
+              class="achievement-list"
             >
-              <div>
-                <strong>Technologies:</strong> Node.js, Webpack, Grunt, Vue.js, Backbone.js,
-                jQuery, HTML5, SVG, CSS3, template engines, Git, Redis, MongoDB
-              </div>
-              <div>
-                <strong>Role:</strong> Tech lead, mentoring, creating social and e-commerce applications.
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="logmeinlogo.jpg"
-              title="LogMeIn - Software Engineer"
-              height="140"
-              from="JAN 2013"
-              to="SEP 2013"
-              link="https://www.logmeininc.com/"
+              <li
+                v-for="bullet in entry.achievements"
+                :key="bullet"
+              >
+                {{ bullet }}
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div
+          v-if="earlierExperience.length"
+          class="earlier-experience"
+        >
+          <p class="section-kicker mb-3">
+            Earlier Experience
+          </p>
+          <div class="row">
+            <div
+              v-for="entry in earlierExperience"
+              :key="`${entry.company}-${entry.dateRange}`"
+              class="col-md-6 col-xl-3 mb-3"
             >
-              <div>
-                <strong>Technologies:</strong> JSP, JavaScript (YUI, jQuery), HTML5, CSS3, SVN, Git
-              </div>
-              <div>
-                <strong>Role:</strong> Improving front-end code quality, performance and UX of BoldChat.
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-
-              src="virgo.jpg"
-              title="Virgo Systems - Front-end Developer"
-              from="MAY 2010"
-              to="DEC 2012"
-              height="120"
-              link="https://systems.virgo.hu/"
-            >
-              <div>
-                <strong>Technologies:</strong> JSP, XHTML, CSS, JavaScript (jQuery, prototype.js), SVN
-              </div>
-              <div>
-                <strong>Role:</strong> Front-end development of iwiw.hu social networking
-                service web applications.
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-              src="sensenet.png"
-              title="Sense/Net Inc - Portal builder"
-              from="FEB 2010"
-              to="MAY 2010"
-              height="120"
-              link="https://www.sensenet.com/"
-            >
-              <div>
-                <strong>Technologies:</strong> XSLT, XHTML, CSS, C#, jQuery, SVN
-              </div>
-              <div>
-                <strong>Role:</strong> Front-end development of portals – e.g. Tigáz,
-                Tigáz DSO, Fővárosi Gázművek Ltd.
-              </div>
-            </article-box>
-          </div>
-          <div class="col-md-6">
-            <article-box
-
-              src="docler-holding.png"
-              title="Docler Holding - Sitebuilder"
-              from="DEC 2008"
-              to="FEB 2010"
-              link="https://www.doclerholding.com/en/main/"
-            >
-              <div>
-                <strong>Technologies:</strong> XHTML, CSS, PHP, jQuery, SVN
-              </div>
-              <div>
-                <strong>Role:</strong> Client side development of docler.hu – social-
-                and video sharing portal.
-              </div>
-            </article-box>
+              <article class="surface-card experience-card experience-card--compact h-100">
+                <div class="experience-header experience-header--compact">
+                  <div>
+                    <h3 class="experience-title mb-1">
+                      {{ entry.jobTitle }}
+                    </h3>
+                    <p class="experience-company mb-2">
+                      {{ entry.company }}
+                    </p>
+                  </div>
+                  <p class="experience-date mb-0">
+                    {{ entry.dateRange }}
+                  </p>
+                </div>
+                <p class="experience-summary mb-0">
+                  {{ entry.summary }}
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <h1 class="section__title">
-          Education
-        </h1>
+      <section
+        id="education"
+        class="content-section education-section"
+      >
+        <article class="surface-card education-card">
+          <p class="section-kicker">
+            Education
+          </p>
+          <h3 class="group-title">
+            Corvinus University of Budapest
+          </h3>
+          <p class="section-note mb-0">
+            B.Sc. in Business Information Systems, 2007 - 2010
+          </p>
+        </article>
+      </section>
+
+      <section
+        id="projects"
+        class="content-section"
+      >
+        <div class="section-heading">
+          <p class="section-kicker">
+            Selected Projects
+          </p>
+          <h2 class="section-title">
+            Recent platform, architecture, and delivery work
+          </h2>
+        </div>
         <div class="row">
-          <div class="col-sm-6">
-            <article-box
-              src="corvinus.png"
-              title="Corvinus University of Budapest - Business Information Systems (BSc)"
-              from="2007"
-              to="2010"
-              height="200"
-              link="http://www.uni-corvinus.hu/index.php?id=en"
-            >
-              <div>
-                <strong>Achieved:</strong> Comprehensive knowledge about the diverse e-World in the following topics:
-                the business models, e-commercial and online business solutions, basics of e-business, common economical
-                laws and IT solutions (e.g. portal technology)
+          <div
+            v-for="project in projects"
+            :key="project.name"
+            class="col-lg-6 mb-4"
+          >
+            <article class="surface-card project-card h-100">
+              <div class="project-meta">
+                <p class="project-period mb-2">
+                  {{ project.dateRange }}
+                </p>
+                <h3 class="project-title">
+                  {{ project.name }}
+                </h3>
               </div>
-            </article-box>
+              <p class="project-description">
+                {{ project.description }}
+              </p>
+              <p class="project-detail">
+                <strong>Role:</strong> {{ project.role }}
+              </p>
+              <p class="project-detail">
+                <strong>Tech stack:</strong> {{ project.stack.join(', ') }}
+              </p>
+              <p class="project-detail">
+                <strong>Impact / outcome:</strong> {{ project.impact }}
+              </p>
+              <ul
+                v-if="project.highlights"
+                class="achievement-list project-highlights"
+              >
+                <li
+                  v-for="highlight in project.highlights"
+                  :key="highlight"
+                >
+                  {{ highlight }}
+                </li>
+              </ul>
+              <a
+                v-if="project.link"
+                :href="project.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                Visit project site
+              </a>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="content-section skills-section"
+      >
+        <div class="section-heading">
+          <p class="section-kicker">
+            Skills
+          </p>
+          <h2 class="section-title">
+            Technical strengths across backend, product delivery, and platform work
+          </h2>
+        </div>
+        <div class="row">
+          <div
+            v-for="group in skillGroups"
+            :key="group.title"
+            class="col-sm-6 col-xl-3 mb-3"
+          >
+            <article class="surface-card skill-card h-100">
+              <h3 class="group-title">
+                {{ group.title }}
+              </h3>
+              <ul class="chip-list chip-list--compact">
+                <li
+                  v-for="item in group.items"
+                  :key="item"
+                  class="chip chip--compact"
+                >
+                  {{ item }}
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="content-section"
+      >
+        <div class="section-heading">
+          <p class="section-kicker">
+            Contact
+          </p>
+          <h2 class="section-title">
+            Let&apos;s talk
+          </h2>
+        </div>
+        <div class="row">
+          <div
+            v-for="item in contact"
+            :key="item.label"
+            class="col-md-6 col-xl-4 mb-4"
+          >
+            <article class="surface-card contact-card h-100">
+              <p class="contact-label">
+                {{ item.label }}
+              </p>
+              <a
+                v-if="item.href"
+                :href="item.href"
+                :target="item.external ? '_blank' : null"
+                :rel="item.external ? 'noopener noreferrer' : null"
+                class="contact-value"
+              >
+                {{ item.value }}
+              </a>
+              <p
+                v-else
+                class="contact-value contact-value--text"
+              >
+                {{ item.value }}
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="cta-panel">
+          <p class="cta-title">
+            Available for backend, platform, or full-stack roles
+          </p>
+          <p class="cta-copy">
+            Best fit: Staff+ IC roles where architecture, hands-on implementation, and product impact stay close together.
+          </p>
+          <a
+            class="btn btn-dark"
+            href="mailto:ferenc@sticza.com"
+          >
+            Start a conversation
+          </a>
         </div>
       </section>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-import ArticleBox from '~/components/ArticleBox'
+const pageTitle = 'Ferenc Sticza | Principal / Staff Software Engineer'
+const pageDescription = 'Principal / Staff software engineer focused on platform, backend, and TypeScript systems, with 20+ years of delivery, several hundred thousand USD in annual savings, CI feedback cut from about 1 hour to 6 minutes, and systems built for millions of requests per day.'
+
+const profile = {
+  name: 'Ferenc Sticza',
+  title: 'Principal / Staff Software Engineer | Platform, Backend, TypeScript',
+  summary: [
+    'Hands-on principal/staff-level engineer with 20+ years building backend systems, product platforms, and distributed services.',
+    'Strongest where platform redesign, delivery speed, reliability, and implementation depth all need to move together.'
+  ],
+  highlight: 'Recent outcomes include full-platform microservice redesign, USD 100Ks+ in annual savings from search modernization, CI feedback reduced from roughly 1 hour to 6 minutes, and public-sector systems reworked to handle millions of requests per day reliably.'
+}
+
+const heroFacts = [
+  { label: 'Experience', value: '20+ years' },
+  { label: 'Base', value: 'Hungary (CET / CEST)' },
+  { label: 'Best fit', value: 'Staff / Principal IC roles with architecture and implementation close together' },
+  { label: 'Primary stack', value: 'JavaScript, TypeScript, Node.js' },
+  { label: 'Focus areas', value: 'Platform engineering, backend systems, distributed architecture' }
+]
+
+const proofPoints = [
+  { value: 'End-to-end', label: 'Redesigned microservice platforms across architecture, delivery, and observability' },
+  { value: '1h -> 6m', label: 'CI feedback time cut to the development environment' },
+  { value: 'Millions/day', label: 'Public systems reworked for reliable high-volume traffic' }
+]
+
+const skillGroups = [
+  {
+    title: 'Backend',
+    items: ['JavaScript', 'TypeScript', 'Node.js', 'Fastify', 'AJV']
+  },
+  {
+    title: 'Frontend',
+    items: ['React', 'Vue.js', 'React Native', 'HTML5', 'CSS3']
+  },
+  {
+    title: 'Cloud / DevOps',
+    items: ['Docker', 'Kubernetes', 'Terraform', 'ArgoCD', 'GitOps', 'Azure', 'AWS', 'Oracle Cloud']
+  },
+  {
+    title: 'Messaging / APIs',
+    items: ['Kafka', 'IBMMQ', 'OpenAPI', 'AsyncAPI', 'REST APIs']
+  },
+  {
+    title: 'Databases',
+    items: ['PostgreSQL', 'MongoDB', 'Redis']
+  },
+  {
+    title: 'Tools / Practices',
+    items: ['Git', 'Vitest', 'Architecture consulting', 'Technical mentoring']
+  },
+  {
+    title: 'Technical leadership',
+    items: ['Hands-on technical leadership', 'System design', 'Platform modernization', 'Reliability and observability', 'Spec-first API delivery', 'Cross-team engineering enablement']
+  }
+]
+
+const experience = [
+  {
+    jobTitle: 'Principal Engineer & Product Architect',
+    company: 'MONAD SYSTEMS',
+    dateRange: 'May 2021 - Present',
+    summary: 'Hands-on principal engineering work across platform redesign, API-first delivery, event-driven systems, and production operations.',
+    stack: ['Node.js', 'TypeScript', 'Kafka', 'OpenAPI', 'AsyncAPI', 'React', 'Vue.js', 'Docker', 'Kubernetes'],
+    achievements: [
+      'Led platform redesign and implementation across clear microservice boundaries, event-driven integration, and production-grade delivery standards.',
+      'Introduced API design-first governance, observability, and quality gates, cutting CI time to the development environment from roughly 1 hour to about 6 minutes.',
+      'At Fizz, redesigned the wider microservice platform and modernized search behind an adapter pattern, delivering major speed gains and annual savings of several hundred thousand USD.'
+    ]
+  },
+  {
+    jobTitle: 'Full Stack JavaScript Engineer',
+    company: 'Self-employed',
+    dateRange: 'Jul 2017 - May 2021',
+    summary: 'Independent JavaScript/TypeScript consulting across backend services, web apps, modernization work, and technical delivery.',
+    stack: ['JavaScript', 'TypeScript', 'Node.js', 'React', 'Vue.js', 'APIs'],
+    achievements: [
+      'Delivered backend services, APIs, and web applications across multiple production client engagements.',
+      'Worked hands-on with Node.js, Redis, Kafka, MongoDB, OpenAPI, React, Vue.js, and React Native.',
+      'Combined implementation, modernization, and technical leadership while staying close to delivery.'
+    ]
+  },
+  {
+    jobTitle: 'Lead Full Stack JavaScript Developer',
+    company: 'Virgo Systems',
+    dateRange: 'Sep 2013 - Jun 2017',
+    summary: 'Lead full-stack JavaScript delivery for social and e-commerce products.',
+    stack: ['Node.js', 'Vue.js', 'Backbone.js', 'Webpack', 'Redis', 'MongoDB', 'Git'],
+    achievements: [
+      'Led JavaScript delivery for social and e-commerce applications.',
+      'Combined architecture work with hands-on implementation and team mentoring.',
+      'Worked across Node.js services, frontend frameworks, and supporting build tooling.'
+    ]
+  },
+  {
+    jobTitle: 'Software Engineer',
+    company: 'LogMeIn',
+    dateRange: 'Jan 2013 - Aug 2013',
+    summary: 'Improved front-end code quality, performance, and user experience for BoldChat.',
+    stack: ['JavaScript', 'YUI', 'jQuery', 'HTML5', 'CSS3', 'Git', 'SVN'],
+    achievements: [
+      'Improved front-end code quality for BoldChat.',
+      'Worked on performance and user experience improvements in a product engineering environment.',
+      'Delivered JavaScript, HTML5, and CSS3 changes using YUI, jQuery, Git, and SVN.'
+    ]
+  },
+  {
+    jobTitle: 'Senior Frontend Developer',
+    company: 'Virgo Systems',
+    dateRange: 'May 2010 - Dec 2012',
+    summary: 'Senior frontend development role at Virgo Systems.',
+    stack: ['JavaScript', 'jQuery', 'prototype.js', 'JSP', 'XHTML', 'CSS', 'SVN'],
+    compact: true,
+    achievements: [
+      'Delivered frontend development for iwiw.hu social networking service web applications.',
+      'Worked with JSP, XHTML, CSS, JavaScript, jQuery, and prototype.js.',
+      'Took on senior frontend responsibilities within Virgo Systems.'
+    ]
+  },
+  {
+    jobTitle: 'Portal Builder',
+    company: 'Sense/Net Inc',
+    dateRange: 'Feb 2010 - May 2010',
+    summary: 'Portal builder role at Sense/Net Inc.',
+    stack: ['XSLT', 'XHTML', 'CSS', 'C#', 'jQuery', 'SVN'],
+    compact: true,
+    achievements: [
+      'Delivered front-end development for portals including Tigaz, Tigaz DSO, and Fovarosi Gazmuvek Ltd.',
+      'Worked with XSLT, XHTML, CSS, C#, jQuery, and SVN.',
+      'Contributed to portal implementation work in an enterprise context.'
+    ]
+  },
+  {
+    jobTitle: 'Sitebuilder',
+    company: 'Docler Holding',
+    dateRange: 'Dec 2008 - Feb 2010',
+    summary: 'Sitebuilder role at Docler Holding.',
+    stack: ['XHTML', 'CSS', 'PHP', 'jQuery', 'SVN'],
+    compact: true,
+    achievements: [
+      'Delivered client-side development for docler.hu social- and video-sharing portal.',
+      'Worked with XHTML, CSS, PHP, jQuery, and SVN.',
+      'Contributed to portal UI implementation and site-building work.'
+    ]
+  },
+  {
+    jobTitle: 'Web Developer',
+    company: 'Consulting Ltd.',
+    dateRange: 'Sep 2006 - Dec 2008',
+    summary: 'Built online PHP-based systems for apartment buildings managing monthly settlement workflows with Fotav.',
+    stack: ['PHP'],
+    compact: true,
+    achievements: [
+      'Built online PHP-based systems for apartment buildings.',
+      'Supported monthly reporting and settlement workflows connected to Fotav.',
+      'Delivered web application functionality for a real operational business process.'
+    ]
+  }
+]
+
+const projects = [
+  {
+    name: 'IdomSoft',
+    dateRange: '2023 - 2026',
+    description: 'Platform engineering and architecture consulting focused on cloud-native delivery and operational foundations.',
+    stack: ['Oracle Cloud', 'Kubernetes', 'GitOps', 'ArgoCD', 'Helm', 'Terraform', 'Node.js', 'TypeScript', 'React'],
+    role: 'Platform Engineering & Architecture Consultant',
+    impact: 'Redesigned and reimplemented the former Electoral Information System while strengthening cloud-native platform foundations for high-volume, reliable public service delivery.',
+    highlights: [
+      'Problem: the former Electoral Information System needed stronger reliability and scalability to handle sustained high request volumes.',
+      'Approach: redesigned and reimplemented the platform architecture while shaping cloud infrastructure and operational practices.',
+      'Outcome: enabled the system to reliably handle millions of requests per day without operational glitches.'
+    ],
+    link: 'https://idomsoft.hu/'
+  },
+  {
+    name: 'Fizz',
+    dateRange: '2022 - 2026',
+    description: 'Hands-on principal engineering contribution across platform redesign, microservice architecture, team enablement, and implementation for a high-performance product platform.',
+    stack: ['Node.js', 'Kafka', 'PostgreSQL', 'MongoDB', 'Redis', 'TypeScript', 'React', 'Azure', 'Azure AI Search', 'Kubernetes', 'OpenAPI', 'AsyncAPI'],
+    role: 'Principal Engineer (Platform Engineering & Architecture)',
+    impact: 'Redesigned the full microservice platform, including the search capability, to improve service boundaries, observability, delivery confidence, performance, cost efficiency, and provider flexibility.',
+    highlights: [
+      'Problem: the platform needed clearer service boundaries across all microservices, stronger operational visibility, reliable delivery gates, and a faster, less costly search capability.',
+      'Approach: redesigned and led implementation of the new microservice platform around clear service boundaries, production observability, API design-first governance, and CI quality gates.',
+      'Search outcome: replaced a slow and flaky third-party provider with an Azure AI Search-based implementation behind an adapter pattern, delivering major speed improvements and annual savings of several hundred thousand USD.',
+      'Delivery outcome: reduced CI time to the development environment from roughly 1 hour to about 6 minutes, making iteration substantially faster.'
+    ],
+    link: 'https://fizz.hu/'
+  },
+  {
+    name: 'Netrisk',
+    dateRange: '2023 - 2025',
+    description: 'Led design and implementation of a modern event-driven insurance platform on Azure, focused on reliability, extensibility, and partner integrations.',
+    stack: ['Node.js', 'TypeScript', 'Kafka', 'Azure', 'GitOps', 'Docker', 'Kubernetes', 'OpenAPI', 'Fastify'],
+    role: 'Lead Architect & Principal Engineer',
+    impact: 'Designed a scalable event-driven insurance platform with reliable partner integration and cloud-native delivery foundations.',
+    highlights: [
+      'Problem: insurance provider integrations needed reliable asynchronous communication and extensible backend foundations.',
+      'Approach: designed Kafka-based event-driven architecture, GitOps-oriented Azure deployment workflows, and scalable Node.js services.',
+      'Outcome: enabled robust real-time communication and integration with multiple insurance partners.'
+    ],
+    link: 'https://www.netrisk.hu/'
+  },
+  {
+    name: 'Magyar Bankholding',
+    dateRange: '2021 - 2022',
+    description: 'Full-stack engineering in a regulated environment with event-driven integration, API contracts, and cloud deployment concerns.',
+    stack: ['Node.js', 'Fastify', 'Kafka', 'IBMMQ', 'Jest', 'AsyncAPI', 'OpenAPI', 'TypeScript', 'Kubernetes', 'Azure', 'AWS'],
+    role: 'Full-Stack JavaScript Engineer',
+    impact: 'Pioneered API spec-driven development and helped establish Internal Developer Platform foundations to speed service delivery in a regulated banking environment.',
+    highlights: [
+      'Problem: teams needed a more consistent way to define APIs and bootstrap new services quickly in a regulated environment.',
+      'Approach: introduced API spec-driven development and helped build Internal Developer Platform foundations with service templates and internally developed packages.',
+      'Outcome: improved delivery consistency and faster service initialization across teams.'
+    ],
+    link: 'https://www.magyarbankholding.hu/en'
+  }
+]
+
+const contact = [
+  {
+    label: 'Email',
+    value: 'ferenc@sticza.com',
+    href: 'mailto:ferenc@sticza.com'
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/ferenc-sticza-ab9a1814',
+    href: 'https://www.linkedin.com/in/ferenc-sticza-ab9a1814/',
+    external: true
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/fsticza',
+    href: 'https://github.com/fsticza',
+    external: true
+  },
+  {
+    label: 'Phone',
+    value: '+36/30-636-0775',
+    href: 'tel:+36306360775'
+  },
+  {
+    label: 'Location / time zone',
+    value: 'Gödöllő, Pest, Hungary (CET / CEST)'
+  },
+  {
+    label: 'PDF CV',
+    value: 'Download PDF CV',
+    href: '/Ferenc-Sticza-CV.pdf'
+  },
+  {
+    label: 'ATS PDF CV',
+    value: 'Download ATS-friendly PDF CV',
+    href: '/Ferenc-Sticza-ATS-CV.pdf'
+  }
+]
 
 export default {
-  components: {
-    ArticleBox
+  data() {
+    return {
+      profile,
+      heroFacts,
+      proofPoints,
+      skillGroups,
+      experience,
+      projects,
+      contact
+    }
+  },
+  head() {
+    return {
+      title: pageTitle,
+      meta: [
+        { hid: 'description', name: 'description', content: pageDescription },
+        { hid: 'og:title', property: 'og:title', content: pageTitle },
+        { hid: 'og:description', property: 'og:description', content: pageDescription },
+        { hid: 'og:url', property: 'og:url', content: 'https://sticza.com' }
+      ]
+    }
+  },
+  computed: {
+    featuredExperience() {
+      return this.experience.filter(entry => !entry.compact)
+    },
+    earlierExperience() {
+      return this.experience.filter(entry => entry.compact)
+    }
   }
 }
 </script>
 
-<style lang="scss">
-@import './assets/scss/abstracts/variables';
-
-.inner-shadow {
-  box-shadow: inset 0 0 10px #999;
-}
-
-.avatar-wrapper {
-  background: #000;
-  width: 220px;
-  border-radius: 50%;
-  box-shadow: 0 0 2px #000;
-  overflow: hidden;
-  display: inline-block;
-  text-align: center;
-}
-
-@page {
-  size: A4;
-  margin:0;
-  min-height: 100vh;
-
-  :first {
-    margin-top: 0;
-    padding-top: 0;
-  }
-
-  :last {
-    height: 100%;
-  }
-}
-
-@media print {
-  body {
-    padding-top: 0;
-    margin: 0;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    min-height: 100vh;
-  }
-  article {
-    page-break-inside: avoid;
-  }
-
-  .main-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-
-  .no-print {
-    display: none !important;
-  }
-  .section--bordered:not(:first-child) {
-    border-color: transparent;
-  }
-}
-</style>
+<style lang="scss" src="~/assets/scss/pages/index.scss"></style>
