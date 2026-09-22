@@ -121,8 +121,10 @@
     padding: 0;
   }
 
+  // Roles and the header stay intact; sections are allowed to flow across a
+  // page break, otherwise a short trailing section (Education) is pushed onto
+  // a page of its own.
   .ats-cv__role,
-  .ats-cv__section,
   .ats-cv__header {
     break-inside: avoid;
     page-break-inside: avoid;

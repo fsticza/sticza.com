@@ -254,7 +254,7 @@
             Skills
           </p>
           <h2 class="section-title">
-            Technical strengths across backend, product delivery, and platform work
+            Technical strengths across full-stack engineering, product delivery, and platform work
           </h2>
         </div>
         <div class="row">
@@ -298,6 +298,7 @@
             v-for="item in contact"
             :key="item.label"
             class="col-md-6 col-xl-4 mb-4"
+            :class="{ 'd-print-none': item.printHidden }"
           >
             <article class="surface-card contact-card h-100">
               <p class="contact-label">
@@ -342,16 +343,16 @@
 
 <script>
 const pageTitle = 'Ferenc Sticza | Principal / Staff Software Engineer'
-const pageDescription = 'Principal / Staff software engineer focused on platform, backend, and TypeScript systems, with 20+ years of delivery, several hundred thousand USD in annual savings, CI feedback cut from about 1 hour to 6 minutes, and systems built for millions of requests per day.'
+const pageDescription = 'Principal / Staff software engineer focused on platform and full-stack TypeScript systems, with 20+ years of delivery, several hundred thousand USD in annual savings, CI feedback cut from about 1 hour to 6 minutes, and systems built for millions of requests per day.'
 
 const profile = {
   name: 'Ferenc Sticza',
-  title: 'Principal / Staff Software Engineer | Platform, Backend, TypeScript',
+  title: 'Principal / Staff Software Engineer | Platform, Full-Stack, TypeScript',
   summary: [
-    'Hands-on principal/staff-level engineer with 20+ years building backend systems, product platforms, and distributed services.',
+    'Hands-on principal/staff-level engineer with 20+ years building full-stack systems, product platforms, and distributed services.',
     'Strongest where platform redesign, delivery speed, reliability, and implementation depth all need to move together.'
   ],
-  highlight: 'Recent outcomes include full-platform microservice redesign, USD 100Ks+ in annual savings from search modernization, CI feedback reduced from roughly 1 hour to 6 minutes, and public-sector systems reworked to handle millions of requests per day reliably.'
+  highlight: 'Recent outcomes include full-platform microservice redesign, USD 100Ks+ in annual savings from search modernization, CI feedback reduced from roughly 1 hour to 6 minutes, and the Hungarian election system reworked to handle millions of requests per day reliably.'
 }
 
 const heroFacts = [
@@ -359,7 +360,7 @@ const heroFacts = [
   { label: 'Base', value: 'Hungary (CET / CEST)' },
   { label: 'Best fit', value: 'Staff / Principal IC roles with architecture and implementation close together' },
   { label: 'Primary stack', value: 'JavaScript, TypeScript, Node.js' },
-  { label: 'Focus areas', value: 'Platform engineering, backend systems, distributed architecture' }
+  { label: 'Focus areas', value: 'Platform engineering, full-stack systems, distributed architecture' }
 ]
 
 const proofPoints = [
@@ -374,12 +375,12 @@ const skillGroups = [
     items: ['JavaScript', 'TypeScript', 'Node.js', 'Fastify', 'AJV']
   },
   {
-    title: 'Frontend',
-    items: ['React', 'Vue.js', 'React Native', 'HTML5', 'CSS3']
+    title: 'Frontend / Mobile / IoT',
+    items: ['React', 'Vue.js', 'React Native', 'HTML5', 'CSS3', 'IoT']
   },
   {
     title: 'Cloud / DevOps',
-    items: ['Docker', 'Kubernetes', 'Terraform', 'ArgoCD', 'GitOps', 'Azure', 'AWS', 'Oracle Cloud']
+    items: ['Docker', 'Kubernetes', 'Terraform', 'ArgoCD', 'GitOps', 'Azure', 'Oracle Cloud', 'AWS']
   },
   {
     title: 'Messaging / APIs',
@@ -388,6 +389,14 @@ const skillGroups = [
   {
     title: 'Databases',
     items: ['PostgreSQL', 'MongoDB', 'Redis']
+  },
+  {
+    title: 'FinOps / ERP domain',
+    items: ['Double-entry ledger', 'Contract billing & revenue', 'AP automation', 'E-invoicing & tax compliance', 'Approval workflows', 'Audit trails']
+  },
+  {
+    title: 'AI Engineering',
+    items: ['LLM orchestration', 'Agentic development workflows', 'Model routing & spend governance', 'PII redaction & DLP boundaries', 'Quality gates for AI-authored code']
   },
   {
     title: 'Tools / Practices',
@@ -405,11 +414,12 @@ const experience = [
     company: 'MONAD SYSTEMS',
     dateRange: 'May 2021 - Present',
     summary: 'Hands-on principal engineering work across platform redesign, API-first delivery, event-driven systems, and production operations.',
-    stack: ['Node.js', 'TypeScript', 'Kafka', 'OpenAPI', 'AsyncAPI', 'React', 'Vue.js', 'Docker', 'Kubernetes'],
+    stack: ['Node.js', 'TypeScript', 'Kafka', 'OpenAPI', 'AsyncAPI', 'React', 'Vue.js', 'Docker', 'Kubernetes', 'LLM orchestration'],
     achievements: [
       'Led platform redesign and implementation across clear microservice boundaries, event-driven integration, and production-grade delivery standards.',
       'Introduced API design-first governance, observability, and quality gates, cutting CI time to the development environment from roughly 1 hour to about 6 minutes.',
-      'At Fizz, redesigned the wider microservice platform and modernized search behind an adapter pattern, delivering major speed gains and annual savings of several hundred thousand USD.'
+      'At Fizz, redesigned the wider microservice platform and modernized search behind an adapter pattern, delivering major speed gains and annual savings of several hundred thousand USD.',
+      'Designed and built a task-to-pull-request agent delivery platform with a fail-closed PII redaction boundary, per-project spend ceilings, and quality gates tuned to the failure modes of model-authored code.'
     ]
   },
   {
@@ -429,11 +439,11 @@ const experience = [
     company: 'Virgo Systems',
     dateRange: 'Sep 2013 - Jun 2017',
     summary: 'Lead full-stack JavaScript delivery for social and e-commerce products.',
-    stack: ['Node.js', 'Vue.js', 'Backbone.js', 'Webpack', 'Redis', 'MongoDB', 'Git'],
+    stack: ['Node.js', 'Vue.js', 'Backbone.js', 'Webpack', 'Redis', 'MongoDB', 'AWS', 'Git'],
     achievements: [
       'Led JavaScript delivery for social and e-commerce applications.',
       'Combined architecture work with hands-on implementation and team mentoring.',
-      'Worked across Node.js services, frontend frameworks, and supporting build tooling.'
+      'Worked across Node.js services, frontend frameworks, AWS infrastructure, and supporting build tooling.'
     ]
   },
   {
@@ -504,15 +514,41 @@ const experience = [
 
 const projects = [
   {
+    name: 'Software Factory (MONAD SYSTEMS)',
+    dateRange: '2026 - Present',
+    description: 'An agent-based software delivery platform: a task note becomes a reviewed pull request against a production repository, with human review as a hard gate.',
+    stack: ['TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Kysely', 'React', 'Kubernetes', 'Terraform', 'OpenRouter', 'LLM orchestration'],
+    role: 'Founder, Architect & Principal Engineer',
+    impact: 'Built agent-driven delivery that is governed rather than improvised - every model call crosses a fail-closed PII boundary, every run has a spend ceiling, and throughput and failure rate are on a dashboard.',
+    highlights: [
+      'Problem: agent-authored code is fast to produce and hard to govern - it leaks data to model providers, duplicates logic, leaves dead exports, and accumulates architectural debt no test suite catches.',
+      'Approach: routed all model traffic through a fail-closed PII service with deterministic Hungarian and English recognizers, reversible per-run tokenization, and a hash-chained egress audit; added dead-code and duplication ratchets, enforced decision records, and per-project spend ceilings.',
+      'Outcome: agent-assisted delivery against production repositories with no un-redacted data leaving the boundary, and flow, review pass rate, and change-failure rate measured continuously.'
+    ]
+  },
+  {
+    name: 'moduLedger (MONAD SYSTEMS)',
+    dateRange: '2024 - Present',
+    description: 'A module-first ERP and FinOps platform for Hungarian service SMEs and government suppliers, covering the contract-to-cash workflow generic invoicing tools skip.',
+    stack: ['TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'React', 'NATS', 'Keycloak', 'OpenAPI', 'AsyncAPI', 'Kubernetes'],
+    role: 'Architect & Principal Engineer',
+    impact: 'Architected and built 24 capability modules spanning ledger, contract billing, timesheets, procurement, payments, bank reconciliation, tax, and payroll posting, with approval trails and tamper-evident audit logs suitable for public-sector and tender-facing work.',
+    highlights: [
+      'Problem: Hungarian service SMEs and government suppliers need contracts, timesheets, certificates of performance, and contract billing to hang together with an audit trail - the part generic invoicing tools leave out.',
+      'Approach: module-first monorepo with capability-based vertical slices, spec-first Fastify services generating OpenAPI and AsyncAPI clients, PostgreSQL with row-level security, and e-invoicing integrations.',
+      'Outcome: sustained architecture ownership across two years and 400+ merged pull requests, with module boundaries and contract-generation discipline held as the system grew.'
+    ]
+  },
+  {
     name: 'IdomSoft',
     dateRange: '2023 - 2026',
     description: 'Platform engineering and architecture consulting focused on cloud-native delivery and operational foundations.',
     stack: ['Oracle Cloud', 'Kubernetes', 'GitOps', 'ArgoCD', 'Helm', 'Terraform', 'Node.js', 'TypeScript', 'React'],
     role: 'Platform Engineering & Architecture Consultant',
-    impact: 'Redesigned and reimplemented the former Electoral Information System while strengthening cloud-native platform foundations for high-volume, reliable public service delivery.',
+    impact: 'Redesigned the architecture and implemented the full frontend of the Hungarian election system (the former Electoral Information System), strengthening cloud-native platform foundations for high-volume, reliable public service delivery.',
     highlights: [
-      'Problem: the former Electoral Information System needed stronger reliability and scalability to handle sustained high request volumes.',
-      'Approach: redesigned and reimplemented the platform architecture while shaping cloud infrastructure and operational practices.',
+      'Problem: the Hungarian election system (the former Electoral Information System) needed stronger reliability and scalability to handle sustained high request volumes.',
+      'Approach: redesigned the platform architecture and implemented the full frontend while shaping cloud infrastructure and operational practices.',
       'Outcome: enabled the system to reliably handle millions of requests per day without operational glitches.'
     ],
     link: 'https://idomsoft.hu/'
@@ -592,12 +628,14 @@ const contact = [
   {
     label: 'PDF CV',
     value: 'Download PDF CV',
-    href: '/Ferenc-Sticza-CV.pdf'
+    href: '/Ferenc-Sticza-CV.pdf',
+    printHidden: true
   },
   {
     label: 'ATS PDF CV',
     value: 'Download ATS-friendly PDF CV',
-    href: '/Ferenc-Sticza-ATS-CV.pdf'
+    href: '/Ferenc-Sticza-ATS-CV.pdf',
+    printHidden: true
   }
 ]
 

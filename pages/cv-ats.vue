@@ -5,10 +5,10 @@
         Ferenc Sticza
       </h1>
       <p class="ats-cv__title">
-        Principal / Staff Software Engineer | Platform, Backend, TypeScript
+        Principal / Staff Software Engineer | Platform, Full-Stack, TypeScript
       </p>
       <p class="ats-cv__summary">
-        Hands-on principal/staff-level engineer with 20+ years building backend systems, product platforms, and distributed services.
+        Hands-on principal/staff-level engineer with 20+ years building full-stack systems, product platforms, and distributed services.
       </p>
       <p class="ats-cv__summary">
         Strongest where platform redesign, delivery speed, reliability, and implementation depth all need to move together.
@@ -28,11 +28,12 @@
         Core Highlights
       </h2>
       <ul class="ats-cv__highlights">
+        <li>Built an agent-based software delivery platform in TypeScript, routing every model call through a fail-closed PII redaction boundary with a tamper-evident audit chain.</li>
         <li>20+ years of software delivery across consulting, product engineering, and hands-on architecture roles.</li>
         <li>Redesigned microservice platforms end to end across architecture, observability, API governance, and delivery workflows.</li>
         <li>Reduced CI feedback to the development environment from roughly 1 hour to about 6 minutes.</li>
         <li>Delivered annual savings of several hundred thousand USD through search-platform modernization.</li>
-        <li>Reworked public-sector systems to handle millions of requests per day reliably.</li>
+        <li>Redesigned the architecture and implemented the full frontend of the Hungarian election system, handling millions of requests per day reliably.</li>
       </ul>
     </section>
 
@@ -56,12 +57,13 @@
           </div>
         </div>
         <p class="ats-cv__meta">
-          Node.js, TypeScript, Kafka, OpenAPI, AsyncAPI, React, Vue.js, Docker, Kubernetes
+          Node.js, TypeScript, Kafka, OpenAPI, AsyncAPI, React, Vue.js, Docker, Kubernetes, LLM orchestration
         </p>
         <ul class="ats-cv__bullets">
           <li>Led platform redesign and implementation across clear microservice boundaries, event-driven integration, and production-grade delivery standards.</li>
           <li>Introduced API design-first governance, observability, and quality gates, cutting CI time to the development environment from roughly 1 hour to about 6 minutes.</li>
           <li>At Fizz, redesigned the wider microservice platform and modernized search behind an adapter pattern, delivering major speed gains and annual savings of several hundred thousand USD.</li>
+          <li>Designed and built a task-to-pull-request agent delivery platform - Fastify/TypeScript services, PostgreSQL, and a React operator UI - with dead-code, duplication, and spend gates tuned to the failure modes of model-authored code.</li>
         </ul>
       </article>
 
@@ -104,12 +106,12 @@
           </div>
         </div>
         <p class="ats-cv__meta">
-          Node.js, Vue.js, Backbone.js, Webpack, Redis, MongoDB, Git
+          Node.js, Vue.js, Backbone.js, Webpack, Redis, MongoDB, AWS, Git
         </p>
         <ul class="ats-cv__bullets">
           <li>Led JavaScript delivery for social and e-commerce applications.</li>
           <li>Combined architecture work with hands-on implementation and team mentoring.</li>
-          <li>Worked across Node.js services, frontend frameworks, and supporting build tooling.</li>
+          <li>Worked across Node.js services, frontend frameworks, AWS infrastructure, and supporting build tooling.</li>
         </ul>
       </article>
 
@@ -165,6 +167,34 @@
       <article class="ats-cv__role">
         <div class="ats-cv__role-header">
           <div class="ats-cv__role-title">
+            Software Factory (MONAD SYSTEMS)
+          </div>
+          <div class="ats-cv__date">
+            2026 - Present
+          </div>
+        </div>
+        <ul class="ats-cv__bullets">
+          <li>Built an agent-based delivery platform turning a task note into a reviewed pull request against production repositories, with human review as a hard gate.</li>
+          <li>All model traffic crosses a fail-closed PII service (deterministic HU/EN recognizers, reversible tokenization, hash-chained egress audit); added dead-code and duplication ratchets, spend ceilings, and flow and change-failure dashboards.</li>
+        </ul>
+      </article>
+      <article class="ats-cv__role">
+        <div class="ats-cv__role-header">
+          <div class="ats-cv__role-title">
+            moduLedger (MONAD SYSTEMS)
+          </div>
+          <div class="ats-cv__date">
+            2024 - Present
+          </div>
+        </div>
+        <ul class="ats-cv__bullets">
+          <li>Architect and principal engineer of a module-first ERP and FinOps platform - 24 capability modules across ledger, contract billing, timesheets, procurement, payments, bank reconciliation, and tax.</li>
+          <li>Modelled contracts to timesheets to certificates of performance to billing with tamper-evident audit trails; spec-first Fastify services, PostgreSQL with row-level security, and e-invoicing integrations (Szamlazz.hu, Billingo, NAV Online Szamla).</li>
+        </ul>
+      </article>
+      <article class="ats-cv__role">
+        <div class="ats-cv__role-header">
+          <div class="ats-cv__role-title">
             IdomSoft
           </div>
           <div class="ats-cv__date">
@@ -172,7 +202,7 @@
           </div>
         </div>
         <ul class="ats-cv__bullets">
-          <li>Redesigned and reimplemented the former Electoral Information System while strengthening cloud-native platform foundations.</li>
+          <li>Redesigned the architecture and implemented the full frontend of the Hungarian election system (the former Electoral Information System), strengthening cloud-native platform foundations.</li>
           <li>Enabled the system to reliably handle millions of requests per day without operational glitches.</li>
         </ul>
       </article>
@@ -193,20 +223,6 @@
       <article class="ats-cv__role">
         <div class="ats-cv__role-header">
           <div class="ats-cv__role-title">
-            Netrisk
-          </div>
-          <div class="ats-cv__date">
-            2023 - 2025
-          </div>
-        </div>
-        <ul class="ats-cv__bullets">
-          <li>Designed a scalable event-driven insurance platform with reliable partner integration and cloud-native delivery foundations.</li>
-          <li>Enabled robust real-time communication and integration with multiple insurance partners.</li>
-        </ul>
-      </article>
-      <article class="ats-cv__role">
-        <div class="ats-cv__role-header">
-          <div class="ats-cv__role-title">
             Magyar Bankholding
           </div>
           <div class="ats-cv__date">
@@ -218,6 +234,20 @@
           <li>Improved delivery consistency and faster service initialization across teams in a regulated banking environment.</li>
         </ul>
       </article>
+      <article class="ats-cv__role">
+        <div class="ats-cv__role-header">
+          <div class="ats-cv__role-title">
+            Netrisk
+          </div>
+          <div class="ats-cv__date">
+            2023 - 2025
+          </div>
+        </div>
+        <ul class="ats-cv__bullets">
+          <li>Designed a scalable event-driven insurance platform with reliable partner integration and cloud-native delivery foundations.</li>
+          <li>Enabled robust real-time communication and integration with multiple insurance partners.</li>
+        </ul>
+      </article>
     </section>
 
     <section class="ats-cv__section">
@@ -226,10 +256,12 @@
       </h2>
       <ul class="ats-cv__skills">
         <li>Backend: JavaScript, TypeScript, Node.js, Fastify, AJV</li>
-        <li>Frontend: React, Vue.js, React Native, HTML5, CSS3</li>
-        <li>Cloud / DevOps: Docker, Kubernetes, Terraform, ArgoCD, GitOps, Azure, AWS, Oracle Cloud</li>
+        <li>AI Engineering: LLM orchestration, agentic workflows, PII/DLP boundaries, AI code-quality gates</li>
+        <li>Frontend / Mobile: React, Vue.js, React Native, HTML5, CSS3, plus IoT project experience</li>
+        <li>Cloud / DevOps: Docker, Kubernetes, Terraform, ArgoCD, GitOps, Azure, Oracle Cloud, AWS</li>
         <li>Messaging / APIs: Kafka, IBMMQ, OpenAPI, AsyncAPI, REST APIs</li>
         <li>Databases: PostgreSQL, MongoDB, Redis</li>
+        <li>FinOps / ERP domain: double-entry ledger, contract billing, AP automation, e-invoicing, audit trails</li>
         <li>Leadership: system design, platform modernization, reliability and observability, spec-first API delivery, technical mentoring</li>
       </ul>
     </section>
@@ -247,7 +279,7 @@
 
 <script>
 const pageTitle = 'Ferenc Sticza | ATS CV'
-const pageDescription = 'ATS-friendly CV for Ferenc Sticza, Principal / Staff Software Engineer focused on platform, backend, and TypeScript systems.'
+const pageDescription = 'ATS-friendly CV for Ferenc Sticza, Principal / Staff Software Engineer focused on platform and full-stack TypeScript systems.'
 
 export default {
   layout: 'cv',
