@@ -100,6 +100,15 @@
                 </h3>
                 <p class="experience-company mb-2">
                   {{ entry.company }}
+                  <a
+                    v-if="entry.link"
+                    :href="entry.link.href"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="experience-link"
+                  >
+                    {{ entry.link.label }}
+                  </a>
                 </p>
               </div>
               <p class="experience-date mb-0">
@@ -352,7 +361,7 @@ const profile = {
     'Hands-on principal/staff-level engineer with 20+ years building full-stack systems, product platforms, and distributed services.',
     'Strongest where platform redesign, delivery speed, reliability, and implementation depth all need to move together.'
   ],
-  highlight: 'Recent outcomes include full-platform microservice redesign, USD 100Ks+ in annual savings from search modernization, CI feedback reduced from roughly 1 hour to 6 minutes, and the Hungarian election system reworked to handle millions of requests per day reliably.'
+  highlight: 'Recent outcomes include full-platform microservice redesign, several hundred thousand USD in annual savings from search modernization, CI feedback reduced from roughly 1 hour to 6 minutes, and the Hungarian election system reworked to handle millions of requests per day reliably.'
 }
 
 const heroFacts = [
@@ -365,7 +374,7 @@ const heroFacts = [
 
 const proofPoints = [
   { value: 'End-to-end', label: 'Redesigned microservice platforms across architecture, delivery, and observability' },
-  { value: '1h -> 6m', label: 'CI feedback time cut to the development environment' },
+  { value: '1h → 6m', label: 'CI feedback time cut to the development environment' },
   { value: 'Millions/day', label: 'Public systems reworked for reliable high-volume traffic' }
 ]
 
@@ -412,6 +421,7 @@ const experience = [
   {
     jobTitle: 'Principal Engineer & Product Architect',
     company: 'MONAD SYSTEMS',
+    link: { label: 'monad.hu', href: 'https://monad.hu/' },
     dateRange: 'May 2021 - Present',
     summary: 'Hands-on principal engineering work across platform redesign, API-first delivery, event-driven systems, and production operations.',
     stack: ['Node.js', 'TypeScript', 'Kafka', 'OpenAPI', 'AsyncAPI', 'React', 'Vue.js', 'Docker', 'Kubernetes', 'LLM orchestration'],

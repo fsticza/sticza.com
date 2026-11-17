@@ -71,7 +71,7 @@
           2026 &copy; Ferenc Sticza
         </div>
         <div class="footer-note">
-          Senior Full-Stack JavaScript/TypeScript Engineer
+          Principal / Staff Software Engineer
         </div>
       </div>
     </footer>
