@@ -11,11 +11,6 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  padding-top: 0 !important;
-  background: #fff;
-}
-
 .cv-layout {
   min-height: 100vh;
 }

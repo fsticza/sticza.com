@@ -1,7 +1,7 @@
 <template>
   <div class="layout-wrapper">
-    <header class="site-header">
-      <nav class="navbar navbar-dark bg-dark fixed-top site-nav">
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-dark bg-dark site-nav">
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center mr-4"
@@ -86,10 +86,8 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/app';
-$body-padding-top: 5.75rem;
 
 body {
-  padding-top: $body-padding-top;
   min-height: 100vh;
   background: #fff;
 }
@@ -98,6 +96,15 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  // Anchor targets stop below the sticky header (62px on one row, 105px when it wraps).
+  [id] {
+    scroll-margin-top: 7.5rem;
+
+    @media (min-width: 992px) {
+      scroll-margin-top: 5rem;
+    }
+  }
 }
 
 .site-nav {
@@ -149,12 +156,6 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  $body-padding-top-mobile: 7rem;
-
-  body {
-    padding-top: $body-padding-top-mobile;
-  }
-
   .site-nav .container {
     row-gap: 0.75rem;
   }
@@ -166,12 +167,6 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  $body-padding-top-small: 8rem;
-
-  body {
-    padding-top: $body-padding-top-small;
-  }
-
   .site-nav__actions {
     justify-content: stretch;
 
