@@ -1,0 +1,9 @@
+{
+  "name": "sticza.com",
+  "short_name": "sticza.com",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
